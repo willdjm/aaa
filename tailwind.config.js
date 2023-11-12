@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       colors: {
         'red': {
+          600: '#D11A17',
           700: '#891127',
           800: '#B20D1B',
         },
@@ -12,6 +13,7 @@ module.exports = {
         },
         'blue': {
           500: '#0062FF',
+          600: '#0089FF',
         },
         'sky': {
           500: '#2177AD',
@@ -21,6 +23,7 @@ module.exports = {
         },
         'gray': {
           300: '#F4F4F4',
+          600: '#D5D5D5',
           500: '#8E8E8E',
         },
       },
