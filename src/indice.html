@@ -1,954 +1,963 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-<meta charset="utf-8" />
-<title>Indice de Imóveis</title>
-<meta name="description" content="Basic HTML/Tailwind starter" />
-<meta name="author" content="Daily Dev Tips" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="styles.css" />
+    <meta charset="utf-8" />
+    <title>Indice de Imóveis</title>
+    <meta name="description" content="indice de imóveis" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="flex flex-col items-center justify-center w-full">
 
-<section class="flex w-full justify-center items-center py-10 px-5">
-<div class='lg:justify-center flex flex-col items-center w-full lg:max-w-6xl'>
+    <section class="flex w-full justify-center items-center py-10 px-5">
+        <div class='lg:justify-center flex flex-col items-center w-full lg:max-w-6xl'>
 
-<div>
-<h1 class="text-red-700 text-4xl uppercase py-10">
-Índice de imóveis
-</h1>
-</div>
+            <h1 class="text-red-700 text-4xl uppercase hidden lg:flex py-10">
+                Índice de imóveis
+            </h1>
 
-<div class="flex flex-col w-full">
-<h2 class="text-red-700 text-xl uppercase py-10">
-Por tipo de imóvel
-</h2>
-<div class="grid lg:grid-cols-3 w-full gap-16 items-start lg:justify-between">
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<img src="/public/icon-apartamento.svg" alt="">
-<ul>
-<h2 class="text-red-700 uppercase">
-Apartamentos
-</h2>
-<li>
-<button>
-<a href="">
-Padrão
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Studio/Kitnet
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Duplex
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Garden
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Flat
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Loft
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Penthouse
-</a>
-</button>
-</li>
-</ul>
-</div>
+            <div class="flex flex-col w-full">
+                <h2 class="text-red-700 text-xl uppercase py-10">
+                    Por tipo de imóvel
+                </h2>
+                <div class="grid lg:grid-cols-3 w-full gap-16 items-start lg:justify-between">
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <img src="/public/icon-apartamento.svg" alt="">
+                        <ul>
+                            <h2 class="text-red-700 uppercase">
+                                Apartamentos
+                            </h2>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Padrão
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Studio/Kitnet
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Duplex
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Garden
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Flat
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Loft
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Penthouse
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<img src="/public/icon-casa.svg" alt="">
-<ul>
-<h2 class="text-red-700 uppercase">
-Casas
-</h2>
-<li>
-<button>
-<a href="">
-Sobrado
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Terrea
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Casa de Vila
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Condominio Fechado
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <img src="/public/icon-casa.svg" alt="">
+                        <ul>
+                            <h2 class="text-red-700 uppercase">
+                                Casas
+                            </h2>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Sobrado
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Terrea
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Casa de Vila
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Condominio Fechado
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<img src="/public/icon-comerciais.svg" alt="">
-<ul>
-<h2 class="text-red-700 uppercase">
-Comerciais
-</h2>
-<li>
-<button>
-<a href="">
-Sala/Conjunto
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Casa Comercial
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Prédio
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Loja/Salão
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Galpão/Depósito/Armazém
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <img src="/public/icon-comerciais.svg" alt="">
+                        <ul>
+                            <h2 class="text-red-700 uppercase">
+                                Comerciais
+                            </h2>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Sala/Conjunto
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Casa Comercial
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Prédio
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Loja/Salão
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Galpão/Depósito/Armazém
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<img src="/public/icon-cobertura.svg" alt="">
-<ul>
-<h2 class="text-red-700 uppercase">
-Coberturas
-</h2>
-<li>
-<button>
-<a href="">
-Duplex
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Padrão
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Penthouse
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <img src="/public/icon-cobertura.svg" alt="">
+                        <ul>
+                            <h2 class="text-red-700 uppercase">
+                                Coberturas
+                            </h2>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Duplex
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Padrão
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Penthouse
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<img src="/public/icon-flat.svg" alt="">
-<ul>
-<h2 class="text-red-700 uppercase">
-Flats
-</h2>
-<li>
-<button>
-<a href="">
-Padrão
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Flat
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Duplex
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Studio/Kitnet
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <img src="/public/icon-flat.svg" alt="">
+                        <ul>
+                            <h2 class="text-red-700 uppercase">
+                                Flats
+                            </h2>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Padrão
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Flat
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Duplex
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Studio/Kitnet
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<img src="/public/icon-terreno.svg" alt="">
-<ul>
-<h2 class="text-red-700 uppercase">
-Terrenos
-</h2>
-<li>
-<button>
-<a href="">
-Terreno
-</a>
-</button>
-</li>
-</ul>
-</div>
-</div>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <img src="/public/icon-terreno.svg" alt="">
+                        <ul>
+                            <h2 class="text-red-700 uppercase">
+                                Terrenos
+                            </h2>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Terreno
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-<div class="flex flex-col w-full py-20">
-<h2 class="text-red-700 text-xl uppercase py-10">
-Por nome de bairro
-</h2>
+        </div>
+    </section>
 
-<div class="grid lg:grid-cols-4 w-full gap-16 items-start justify-between">
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">A</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Aclimacao
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Agua Branca
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Alto da Boa Vista
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Alto da Lapa
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Alto de Pinheiros
-</a>
-</button>
-</li>
-</ul>
-</div>
+    <section class="flex w-full justify-center items-center py-10 px-5 bg-gray-300">
+        <div class='lg:justify-center flex flex-col items-center w-full lg:max-w-6xl'>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-B
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Barra Funda
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Bela Vista
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Bosque da Saude
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Brooklin
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Butanta
-</a>
-</button>
-</li>
-</ul>
-</div>
+            <div class="flex flex-col w-full">
+                <h2 class="text-red-700 text-xl uppercase py-10">
+                    Por nome de bairro
+                </h2>
+                <div class="grid lg:grid-cols-4 w-full gap-16 items-start lg:justify-between">
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">A</h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Aclimacao
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Agua Branca
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Alto da Boa Vista
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Alto da Lapa
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Alto de Pinheiros
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-C
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Cambuci
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Campo Belo
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Campos Eliseos
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Caxingui
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Chacara Inglesa
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Chacara Klabin
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Chacara Monte Alegre
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Chacara Santo Antonio
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Cidade Jardim
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Consolacao
-</a>
-</button>
-</li>
-</ul>
-</div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-H
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Higienopolis
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">B</h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Barra Funda
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Bela Vista
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Bosque da Saude
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Brooklin
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Butanta
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-I
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Ipiranga
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Itaim Bibi
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
+                            C
+                        </h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Cambuci
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Campo Belo
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Campos Eliseos
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Caxingui
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Chacara Inglesa
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Chacara Klabin
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Chacara Monte Alegre
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Chacara Santo Antonio
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Cidade Jardim
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Consolacao
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-L
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Lapa
-</a>
-</button>
-</li>
-</ul>
-</div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-M
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Mirandopolis
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Moema
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
+                            H
+                        </h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Higienopolis
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-P
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Pacaembu
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Paraiso
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Perdizes
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Pinheiros
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Planalto Paulista
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Pompeia
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
+                            I
+                        </h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Ipiranga
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Itaim Bibi
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-R
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Republica
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
+                            L
+                        </h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Lapa
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-S
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Santa Cecilia
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Santo Amaro
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Sao Judas
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Saude
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Sumare
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
+                            M
+                        </h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Mirandopolis
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Moema
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
-<h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
-V
-</h1>
-<ul>
-<li>
-<button>
-<a href="">
-Vila Clementino
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Vila Gumercindo
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Vila Leopoldina
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Vila Madalena
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Vila Monumento
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Vila Nova Conceicao
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Vila Olimpia
-</a>
-</button>
-</li>
-<li>
-<button>
-<a href="">
-Vila Romana
-</a>
-</button>
-</li>
-</ul>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
+                            P
+                        </h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Pacaembu
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Paraiso
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Perdizes
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Pinheiros
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Planalto Paulista
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Pompeia
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-</div>
-</div>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
+                            R
+                        </h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Republica
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-</div>
-</section>
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
+                            S
+                        </h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Santa Cecilia
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Santo Amaro
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Sao Judas
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Saude
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Sumare
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
-<!-- FOOTER -->
-<footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-5">
+                    <div class="border-t-2 w-full flex items-start gap-7 border-red-700 py-5">
+                        <h1 class="uppercase text-6xl flex items-start justify-start text-red-700 font-medium">
+                            V
+                        </h1>
+                        <ul>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Vila Clementino
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Vila Gumercindo
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Vila Leopoldina
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Vila Madalena
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Vila Monumento
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Vila Nova Conceicao
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Vila Olimpia
+                                    </a>
+                                </button>
+                            </li>
+                            <li>
+                                <button>
+                                    <a href="">
+                                        Vila Romana
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-<!-- INICIO ACESSO -->
-<div class='max-w-7xl flex flex-col w-full justify-between items-stretch'>    
-<div class="w-full items-center flex">
-<span class="flex items-center justify-center mr-4">ACESSO</span>
-<span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
-</div> 
-<div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4 ml-16 lg:ml-0">
-<div>
-<h2 class="mb-3">Home</h2>
-<ul>
-<li class="mb-2">
-<a href="#" class=" hover:underline">BLOG</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Política de Privacidade</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Termos de Uso</a>
-</li>
-</ul>
-</div>
-<div>
-<h2 class="mb-3">Imóveis</h2>
-<ul class="ml-4">
-<li class="mb-2">
-<a href="#" class=" hover:underline">Buscar Imóveis</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Cadastre Seu Imóvel</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Avalie seu Imóvel</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Favoritos</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Imóveis Visualizados</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Índice de Imóveis</a>
-</li>
-</ul>
-</div>
+        </div>
+    </section>
 
-<div>
-<h2 class="mb-3">Serviços</h2>
-<ul class="ml-4">
-<li class="mb-2">
-<a href="#" class=" hover:underline">Financiamento</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Assessoria Jurídica</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Proposta de Compra</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Autorização de Venda</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Autorização de Publicidade</a>
-</li>
-</ul>
-</div>
+    <!-- FOOTER -->
+    <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-5">
+        <div class='lg:justify-between justify-center w-full items-center flex flex-col lg:max-w-6xl'>
+            <!-- ACESSO -->
+            <div class='flex flex-col w-full justify-between items-stretch'>
+                <div class="w-full items-center flex">
+                    <span class="flex items-center justify-center mr-4">ACESSO</span>
+                    <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
+                </div>
+                <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4 ml-16 lg:ml-0">
+                    <div>
+                        <h2 class="mb-3">Home</h2>
+                        <ul>
+                            <li class="mb-2">
+                                <a href="#" class=" hover:underline">BLOG</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Política de Privacidade</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Termos de Uso</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-3">Imóveis</h2>
+                        <ul class="ml-4">
+                            <li class="mb-2">
+                                <a href="#" class=" hover:underline">Buscar Imóveis</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Cadastre Seu Imóvel</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Avalie seu Imóvel</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Favoritos</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Imóveis Visualizados</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Índice de Imóveis</a>
+                            </li>
+                        </ul>
+                    </div>
 
-<div>
-<h2 class="mb-3">Institucional</h2>
-<ul class="ml-4">
-<li class="mb-2">
-<a href="#" class=" hover:underline">Sobre a Zimmermann</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Área de Atuação</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Seja Corretor Associado</a>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Contato</a>
-</li>
-<li class="mb-2 flex gap-5 text-white items-center ">
-<a href="#">
-<img src="/public/instagram-brands.svg" alt="">
+                    <div>
+                        <h2 class="mb-3">Serviços</h2>
+                        <ul class="ml-4">
+                            <li class="mb-2">
+                                <a href="#" class=" hover:underline">Financiamento</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Assessoria Jurídica</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Proposta de Compra</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Autorização de Venda</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Autorização de Publicidade</a>
+                            </li>
+                        </ul>
+                    </div>
 
-</a>
-<a href="#">
-<img src="/public/facebook-brands.svg" alt="">
+                    <div>
+                        <h2 class="mb-3">Institucional</h2>
+                        <ul class="ml-4">
+                            <li class="mb-2">
+                                <a href="#" class=" hover:underline">Sobre a Zimmermann</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Área de Atuação</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Seja Corretor Associado</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Contato</a>
+                            </li>
+                            <li class="mb-2 flex gap-5 text-white items-center ">
+                                <a href="#">
+                                    <img src="/public/instagram-brands.svg" alt="">
 
-</a>
-<a href="#">
-<img src="/public/linkedin-brands.svg" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="/public/facebook-brands.svg" alt="">
 
-</a>
-<a href="#">
-<img src="/public/youtube-brands.svg" alt="">
-</a>                        
-</li>
-</ul>
-</div>
-</div>
-</div>
+                                </a>
+                                <a href="#">
+                                    <img src="/public/linkedin-brands.svg" alt="">
 
-<!-- SOMBRA -->
-<img src="/public/blur-vermelho-1.svg" class="rotate-180" alt="logo Gukenz" width="100%" height="100%"/>
+                                </a>
+                                <a href="#">
+                                    <img src="/public/youtube-brands.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-<!-- INICIO NOSSAS UNIDADES -->
-<div class='max-w-7xl flex flex-col w-full justify-between items-stretch pt-14'>        
-<div class="w-full items-center flex">
-<span class="flex items-center justify-center mr-4">NOSSAS UNIDADES</span>
-<span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
-</div> 
+            <!-- SOMBRA -->
+            <img src="/public/blur-vermelho-1.svg" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
 
-<div class="grid grid-cols-1 w-full gap-8 py-10 md:grid-cols-4 ml-16 lg:ml-0">
+            <!-- NOSSAS UNIDADES -->
+            <div class='flex flex-col w-full justify-between items-stretch pt-14'>
+                <div class="w-full items-center flex">
+                    <span class="flex items-center justify-center mr-4">NOSSAS UNIDADES</span>
+                    <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
+                </div>
 
-<div>
-<h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
-<ul class="flex flex-col gap-3">
-<li>
-<p class="flex justify-start">
-<img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-(11) 99999-0938
-</p>
-</li>
-<li>
-<p class="flex justify-start">
-<img src="/public/telephone_126341.svg" class="mr-1" alt="">
-(11) 99999-0938
-</p>
-</li>
-<li class="mb-1">
-<p>R. Campevas, 341</p>
-<p>Perdizes - CEP 05016-010</p>
-<p>São Paulo - SP</p>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Ver no mapa</a>
-</li>
-</ul>
-</div>
+                <div class="grid grid-cols-1 w-full gap-8 py-10 md:grid-cols-4 ml-16 lg:ml-0">
 
-<div>
-<h2 class="mb-3">Agência Pinheiros
-</h2>
-<ul class="">
-<li class="mb-2">
-<p class="flex justify-start">
-<img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
+                    <div>
+                        <h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
+                        <ul class="flex flex-col gap-3">
+                            <li>
+                                <p class="flex justify-start">
+                                    <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
+                                    (11) 99999-0938
+                                </p>
+                            </li>
+                            <li>
+                                <p class="flex justify-start">
+                                    <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                                    (11) 99999-0938
+                                </p>
+                            </li>
+                            <li class="mb-1">
+                                <p>R. Campevas, 341</p>
+                                <p>Perdizes - CEP 05016-010</p>
+                                <p>São Paulo - SP</p>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Ver no mapa</a>
+                            </li>
+                        </ul>
+                    </div>
 
-(11) 99939-9934
-</p>
-</li>
-<li class="mb-2">
-<p class="flex justify-start">
-<img src="/public/telephone_126341.svg" class="mr-1" alt="">
-(11) 99999-0938
-</p>
-</li>
-<li class="mb-2">
-<p>R. Simão Álvares, 464
-</p>
-<p>Pinheiros - CEP 05417-020
-</p>
-<p>São Paulo - SP</p>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Ver no mapa</a>
-</li>
-</ul>
-</div>
+                    <div>
+                        <h2 class="mb-3">Agência Pinheiros
+                        </h2>
+                        <ul class="">
+                            <li class="mb-2">
+                                <p class="flex justify-start">
+                                    <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
 
-<div>
-<h2 class="mb-3">Agência Jardins
-</h2>
-<ul class="">
-<li class="mb-2">
-<p class="flex justify-start">
-<img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
+                                    (11) 99939-9934
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <p class="flex justify-start">
+                                    <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                                    (11) 99999-0938
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <p>R. Simão Álvares, 464
+                                </p>
+                                <p>Pinheiros - CEP 05417-020
+                                </p>
+                                <p>São Paulo - SP</p>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Ver no mapa</a>
+                            </li>
+                        </ul>
+                    </div>
 
-(11) 99999-0938
-</p>
-</li>
-<li class="mb-2">
-<p class="flex justify-start">
-<img src="/public/telephone_126341.svg" class="mr-1" alt="">
-(11) 99999-0938
-</p>
-</li>
-<li class="mb-2">
-<p>
-Al. Joaquim Eugênio de Lima, 1281
-</p>
-<p>
-Jardim Paulista - CEP 01403-003
-</p>
-<p>
-São Paulo - SP
-</p>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Ver no mapa</a>
-</li>
-</ul>
-</div>
+                    <div>
+                        <h2 class="mb-3">Agência Jardins
+                        </h2>
+                        <ul class="">
+                            <li class="mb-2">
+                                <p class="flex justify-start">
+                                    <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
 
-<div>
-<h2 class="mb-3">Agência Vila Romana
-</h2>
-<ul class="">
-<li class="lg:mb-2">
-<p class="flex justify-start">
-<img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-(11) 93207-3204
-</p>
-</li>
-<li class="mb-2">
-<p class="flex justify-start">
-<img src="/public/telephone_126341.svg" class="mr-1" alt="">
-(11) 99999-0938
-</p>
-</li>
-<li class="mb-2">
-<p>
-R. Tito, 766
-</p>
-<p>
-Vila Romana - CEP 05051-000
-</p>
-<p>
-São Paulo - SP</p>
-</li>
-<li class="mb-2">
-<a href="#" class="hover:underline">Ver no mapa</a>
-</li>
-</ul>
-</div>
+                                    (11) 99999-0938
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <p class="flex justify-start">
+                                    <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                                    (11) 99999-0938
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <p>
+                                    Al. Joaquim Eugênio de Lima, 1281
+                                </p>
+                                <p>
+                                    Jardim Paulista - CEP 01403-003
+                                </p>
+                                <p>
+                                    São Paulo - SP
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Ver no mapa</a>
+                            </li>
+                        </ul>
+                    </div>
 
-</div>
-</div>
+                    <div>
+                        <h2 class="mb-3">Agência Vila Romana
+                        </h2>
+                        <ul class="">
+                            <li class="lg:mb-2">
+                                <p class="flex justify-start">
+                                    <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
+                                    (11) 93207-3204
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <p class="flex justify-start">
+                                    <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                                    (11) 99999-0938
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <p>
+                                    R. Tito, 766
+                                </p>
+                                <p>
+                                    Vila Romana - CEP 05051-000
+                                </p>
+                                <p>
+                                    São Paulo - SP</p>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="hover:underline">Ver no mapa</a>
+                            </li>
+                        </ul>
+                    </div>
 
-<!-- SOMBRA -->
-<img src="/public/blur-vermelho-1.svg" alt="logo Gukenz" width="100%" height="100%"/>
+                </div>
+            </div>
 
-<!-- INICIO HORÁRIOS -->
-<div class='max-w-7xl flex flex-col w-full justify-between items-stretch'>   
-<div class="grid lg:grid-cols-4 grid-cols-1 lg:divide-x items-start justify-start w-full">
-<span class="text-center">
-Segunda a sexta das 8h30 às 18h30
-</span>
-<span class="text-center px-3">
-Sábado e feriados das 8h30 às 13h30
-</span>
-<span class="text-center px-3">
-Domingos das 9h às 13h (plantão online)
-</span>
-<span class="text-center px-3">
-Atendimento online todos os dias.
-</span>
-</div>
-</div> 
+            <!-- SOMBRA -->
+            <img src="/public/blur-vermelho-1.svg" alt="logo Gukenz" width="100%" height="100%" />
 
-<!-- INICIO COPYRIGHT -->
-<div class='max-w-7xl flex flex-col w-full justify-between items-stretch pt-14'>    
-<div class='grid lg:flex w-full lg:justify-between py-8 gap-10'>
-<span class="text-sm text-center hidden lg:flex">CRECI 15.319-J - © Copyright 2023 - Zimmermann Imóveis LTDA - Todos os direitos reservados.</span>
-<span class="text-center lg:hidden">CRECI 15.319-J - © Copyright 2023 <br> Zimmermann Imóveis LTDA <br> Todos os direitos reservados.</span>
-<div class='flex gap-10 items-end justify-center'>
-<a href="https://sacorp.tec.br/?utm_source=www.mayerbastoscostaadv.com.br&utm_medium=banner&utm_campaign=slogan" target='_blank' rel="noreferrer">
-<img src="/public/logo-sacorp.svg" alt="logo Sacorp" width="100%" height="100%" loading="lazy"/>
-</a>
-<a href="https://www.gukenz.com.br/" target='_blank' rel="noreferrer">
-<img src="/public/logo-gukenz.svg" alt="logo Gukenz" width="100%" height="100%"/>
-</a>
-</div>
-</div>
-</div>
+            <!-- HORÁRIOS -->
+            <div class='flex flex-col w-full justify-between items-stretch'>
+                <div class="grid lg:grid-cols-4 grid-cols-1 lg:divide-x items-start justify-start w-full">
+                    <span class="text-center lg:text-sm">
+                        Segunda a sexta das 8h30 às 18h30
+                    </span>
+                    <span class="text-center lg:text-sm">
+                        Sábado e feriados das 8h30 às 13h30
+                    </span>
+                    <span class="text-center lg:text-sm">
+                        Domingos das 9h às 13h (plantão online)
+                    </span>
+                    <span class="text-center lg:text-sm">
+                        Atendimento online todos os dias.
+                    </span>
+                </div>
+            </div>
 
-</footer>
+            <!-- COPYRIGHT -->
+            <div class='flex flex-col w-full justify-between items-stretch pt-14'>
+                <div class='grid lg:flex w-full lg:justify-between py-8 gap-10'>
+                    <span class="text-sm text-center hidden lg:flex">CRECI 15.319-J - © Copyright 2023 - Zimmermann
+                        Imóveis LTDA -
+                        Todos os direitos reservados.</span>
+                    <span class="text-center lg:hidden">CRECI 15.319-J - © Copyright 2023 <br> Zimmermann Imóveis LTDA
+                        <br> Todos
+                        os direitos reservados.</span>
+                    <div class='flex gap-10 items-end justify-center'>
+                        <a href="https://sacorp.tec.br/?utm_source=www.mayerbastoscostaadv.com.br&utm_medium=banner&utm_campaign=slogan"
+                            target='_blank' rel="noreferrer">
+                            <img src="/public/logo-sacorp.svg" alt="logo Sacorp" width="100%" height="100%"
+                                loading="lazy" />
+                        </a>
+                        <a href="https://www.gukenz.com.br/" target='_blank' rel="noreferrer">
+                            <img src="/public/logo-gukenz.svg" alt="logo Gukenz" width="100%" height="100%" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
