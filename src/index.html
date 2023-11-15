@@ -500,6 +500,84 @@ Dashboard
   </script>
   <!-- FIM BANNER -->
 
+  <!-- BUSCA -->
+  <section class="flex w-full justify-center items-center px-5">
+    <div class='lg:justify-center items-center flex w-full lg:max-w-6xl'>
+
+      <!-- BUSCA COMPUTADOR-->
+      <div class="lg:flex items-center justify-center w-full gap-3 hidden">
+
+        <button class="group relative h-16 w-32 overflow-hidden rounded-lg bg-red-600 px-5">
+          <div class="absolute inset-0 bg-red-700 h-full transition-all duration-500 ease-out group-hover:h-0"></div>
+          <a href="resultadoBusca.html" class="relative text-white">Busca pelo Mapa</a>
+        </button>
+
+        <button class="group relative h-16 w-32 overflow-hidden rounded-lg bg-red-600 px-5">
+          <div class="absolute inset-0 bg-red-700 h-full transition-all duration-500 ease-out group-hover:h-0"></div>
+          <a href="" class="relative text-white">Busca Genérica</a>
+        </button>
+
+        <button class="group relative h-16 w-32 overflow-hidden rounded-lg bg-red-600 px-5">
+          <div class="absolute inset-0 bg-red-700 h-full transition-all duration-500 ease-out group-hover:h-0"></div>
+          <a href="resultadoBusca.html" class="relative text-white">Imóveis com Vídeo</a>
+        </button>
+
+        <button class="group relative h-16 w-32 overflow-hidden rounded-lg bg-red-600 px-5">
+          <div class="absolute inset-0 bg-red-700 h-full transition-all duration-500 ease-out group-hover:h-0"></div>
+          <a href="resultadoBusca.html" class="relative text-white">Índice de imóveis</a>
+        </button>
+
+        <input type="text"
+          class="max-w-lg border h-16 border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 drop-shadow-md"
+          placeholder="Busque por endereço, bairro, palavra-chave ou Código do imóvel">
+
+        <button class="group relative h-16 w-16 overflow-hidden rounded-lg bg-red-600 px-5">
+          <div class="absolute inset-0 bg-red-700 h-full transition-all duration-500 ease-out group-hover:h-0"></div>
+          <a href="resultadoBusca.html" class="relative text-white"><img src="/public/search_bairros.svg" alt="Photo"
+              class="items-center justify-center flex" /></a>
+        </button>
+
+      </div>
+      <!-- BUSCA MOBILE-->
+      <div class="grid items-center justify-center w-full gap-2 lg:hidden px-2">
+
+        <div class="flex items-center justify-center gap-2 w-full">
+          <input type="text"
+            class="max-w-xs border h-16 border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+            placeholder="Busque por endereço, bairro, palavra-chave ou Código do imóvel">
+
+          <button type="button"
+            class="bg-red-700 font-medium h-16 w-20 rounded-md text-white px-4 flex items-center justify-center justify-items-center">
+            <img src="/public/search_bairros.svg" alt="Photo" class="items-center justify-center flex" />
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between w-full gap-2">
+          <button type="button"
+            class="bg-red-700 h-16 w-20 text-sm rounded-md text-white lg:px-2 flex items-center justify-center justify-items-center">
+            Busca pelo Mapa
+          </button>
+
+          <button type="button"
+            class="bg-red-700 h-16 w-20 text-sm rounded-md text-white lg:px-2 flex items-center justify-center justify-items-center">
+            Busca Genérica
+          </button>
+
+          <button type="button"
+            class="bg-red-700 h-16 w-20 text-sm rounded-md text-white lg:px-2 px-1 flex items-center justify-center justify-items-center">
+            Imóveis com Vídeo
+          </button>
+
+          <button type="button"
+            class="bg-red-700 h-16 w-20 text-sm rounded-md text-white lg:px-2 flex items-center justify-center justify-items-center">
+            Índice de imóveis
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
 </body>
 </html>
