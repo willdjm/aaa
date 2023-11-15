@@ -7,9 +7,75 @@
   <meta name="description" content="contato" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/public/fontawesome/css/all.min.css" />
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="flex flex-col items-center justify-center w-full">
+
+  <!-- NAVBARFIXA OK -->
+<div class="w-full">
+  <!-- NAVBARFIXA DESKTOP -->
+  <nav class="bg-red-700 fixed bottom-0 z-50 justify-center items-center w-full hidden lg:flex">
+    <div class="lg:w-2/5 flex items-center justify-end mt-1">
+      <a href="index.html">
+        <img class="cursor-pointer" src="/public/logo-footer.png" width="100%" height="100%" alt="...">
+      </a>
+    </div>
+    <div class="w-full bg-red-700 lg:flex items-center justify-between px-5">
+      <ul class="flex w-full items-center justify-between max-w-5xl">
+        <li class="ml-3">
+          <a class="flex items-center justify-center gap-1" href="#">
+            <p href="#!" class="text-white uppercase text-base">
+              Perdizes
+            </p>
+            <i class="fa-brands fa-whatsapp text-white"></i>
+            <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+          </a>
+        </li>
+        <li class="ml-3">
+          <a class="flex items-center justify-center gap-1" href="#">
+            <p href="#!" class="text-white uppercase text-base">
+              Pinheiros
+            </p>
+            <i class="fa-brands fa-whatsapp text-white"></i>
+            <p class="text-xs text-white">(11) <span class="text-base text-white">99939-9934</span></p>
+          </a>
+        </li>
+        <li class="ml-3 font-bold">
+          <a class="flex items-center justify-center gap-1" href="#">
+            <p href="#!" class="text-white uppercase text-base">
+              Jardins
+            </p>
+            <i class="fa-brands fa-whatsapp text-white"></i>
+            <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+          </a>
+        </li>
+        <li class="ml-3">
+          <a class="flex items-center justify-center gap-1" href="#">
+            <p href="#!" class="text-white uppercase text-base">
+              Vila Romana
+            </p>
+            <i class="fa-brands fa-whatsapp text-white"></i>
+            <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- NAVBARFIXA MOBILE -->
+  <nav class="flex fixed bottom-0 z-50 bg-green-500 justify-center items-center w-full lg:hidden">
+    <div class="w-full justify-center h-full flex items-center">
+      <a href="index.html">
+        <img class="cursor-pointer" src="/public/logo-barra-mobile.png" alt="...">
+      </a>
+    </div>
+    <div class="w-1/2 flex items-center justify-center">
+      <i class="fa-brands fa-whatsapp text-white text-5xl"></i>
+    </div>
+  </nav>
+</div>
 
   <!-- BANNER -->
   <section class="w-full flex flex-col justify-center items-center pt-10 px-5">
@@ -44,21 +110,21 @@
         <form class=" flex flex-col justify-center w-full">
           <div class="flex flex-col">
             <input type="name" name="name" id="name" placeholder="Nome"
-              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800">
+              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
           </div>
 
           <div class="flex flex-col mt-2">
             <input type="email" name="email" id="email" placeholder="E-mail"
-              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800">
+              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
           </div>
 
           <div class="flex flex-col mt-2">
             <input type="tel" name="tel" id="tel" placeholder="Celular"
-              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800">
+              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
           </div>
 
           <div class="flex flex-col mt-2">
-            <select class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800">
+            <select class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
               <option>Escolha a área desejada</option>
               <option>Option 2</option>
               <option>Option 3</option>
@@ -67,7 +133,7 @@
           </div>
           <div class="flex flex-col mt-2">
             <textarea rows="5" placeholder="Mensagem"
-              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800"></textarea>
+              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
           </div>
 
           <div class="flex lg:items-end items-center lg:justify-end justify-center">
@@ -85,19 +151,21 @@
 
   <!-- FOOTER -->
   <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-5">
-    <div class='lg:justify-between justify-center w-full items-center flex flex-col lg:max-w-6xl'>
+    <div class='lg:justify-between justify-center w-full items-center flex flex-col'>
       <!-- ACESSO -->
-      <div class='flex flex-col w-full justify-between items-stretch'>
+      <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
         <div class="w-full items-center flex">
           <span class="flex items-center justify-center mr-4">ACESSO</span>
           <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
         </div>
         <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4 ml-16 lg:ml-0">
           <div>
-            <h2 class="mb-3">Home</h2>
+            <h2 class="mb-3">
+              <a href="index.html">Home</a>
+            </h2>
             <ul>
               <li class="mb-2">
-                <a href="#" class=" hover:underline">BLOG</a>
+                <a href="blog.html" class=" hover:underline">BLOG</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Política de Privacidade</a>
@@ -111,22 +179,22 @@
             <h2 class="mb-3">Imóveis</h2>
             <ul class="ml-4">
               <li class="mb-2">
-                <a href="#" class=" hover:underline">Buscar Imóveis</a>
+                <a href="resultadoBusca.html" class=" hover:underline">Buscar Imóveis</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Cadastre Seu Imóvel</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Avalie seu Imóvel</a>
+                <a href="avaliacaoImovel.html" class="hover:underline">Avalie seu Imóvel</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Favoritos</a>
+                <a href="imoveisFavoritos.html" class="hover:underline">Favoritos</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Imóveis Visualizados</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Índice de Imóveis</a>
+                <a href="indice.html" class="hover:underline">Índice de Imóveis</a>
               </li>
             </ul>
           </div>
@@ -135,10 +203,10 @@
             <h2 class="mb-3">Serviços</h2>
             <ul class="ml-4">
               <li class="mb-2">
-                <a href="#" class=" hover:underline">Financiamento</a>
+                <a href="assessoriaFinanciamento.html" class=" hover:underline">Financiamento</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Assessoria Jurídica</a>
+                <a href="assessoriaJuridica.html" class="hover:underline">Assessoria Jurídica</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Proposta de Compra</a>
@@ -156,32 +224,29 @@
             <h2 class="mb-3">Institucional</h2>
             <ul class="ml-4">
               <li class="mb-2">
-                <a href="#" class=" hover:underline">Sobre a Zimmermann</a>
+                <a href="institucional.html" class=" hover:underline">Sobre a Zimmermann</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Área de Atuação</a>
+                <a href="areasdeatuacao.html" class="hover:underline">Área de Atuação</a>
               </li>
               <li class="mb-2">
                 <a href="#" class="hover:underline">Seja Corretor Associado</a>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Contato</a>
+                <a href="contact.html" class="hover:underline">Contato</a>
               </li>
               <li class="mb-2 flex gap-5 text-white items-center ">
                 <a href="#">
-                  <img src="/public/instagram-brands.svg" alt="">
-
+                  <i class="fa-brands fa-instagram text-3xl text-white"></i>
                 </a>
                 <a href="#">
-                  <img src="/public/facebook-brands.svg" alt="">
-
+                  <i class="fa-brands fa-facebook text-3xl text-white"></i>
                 </a>
                 <a href="#">
-                  <img src="/public/linkedin-brands.svg" alt="">
-
+                  <i class="fa-brands fa-linkedin text-3xl text-white"></i>
                 </a>
                 <a href="#">
-                  <img src="/public/youtube-brands.svg" alt="">
+                  <i class="fa-brands fa-youtube text-3xl text-white"></i>
                 </a>
               </li>
             </ul>
@@ -193,21 +258,22 @@
       <img src="/public/blur-vermelho-1.svg" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
 
       <!-- NOSSAS UNIDADES -->
-      <div class='flex flex-col w-full justify-between items-stretch pt-14'>
+      <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
         <div class="w-full items-center flex">
           <span class="flex items-center justify-center mr-4">NOSSAS UNIDADES</span>
           <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
         </div>
 
         <div class="grid grid-cols-1 w-full gap-8 py-10 md:grid-cols-4 ml-16 lg:ml-0">
-
           <div>
             <h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
             <ul class="flex flex-col gap-3">
               <li>
                 <p class="flex justify-start">
-                  <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-                  (11) 99999-0938
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99999-0938
+                  </a>
                 </p>
               </li>
               <li>
@@ -222,29 +288,29 @@
                 <p>São Paulo - SP</p>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Ver no mapa</a>
+                <a href="#" class="underline">Ver no mapa</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h2 class="mb-3">Agência Pinheiros
-            </h2>
-            <ul class="">
-              <li class="mb-2">
+            <h2 class="mb-3">Agência <span class="font-semibold">Pinheiros</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
                 <p class="flex justify-start">
-                  <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-
-                  (11) 99939-9934
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99939-9934
+                  </a>
                 </p>
               </li>
-              <li class="mb-2">
+              <li>
                 <p class="flex justify-start">
                   <img src="/public/telephone_126341.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
-              <li class="mb-2">
+              <li class="mb-1">
                 <p>R. Simão Álvares, 464
                 </p>
                 <p>Pinheiros - CEP 05417-020
@@ -252,29 +318,29 @@
                 <p>São Paulo - SP</p>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Ver no mapa</a>
+                <a href="#" class="underline">Ver no mapa</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h2 class="mb-3">Agência Jardins
-            </h2>
-            <ul class="">
-              <li class="mb-2">
+            <h2 class="mb-3">Agência <span class="font-semibold">Jardins</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
                 <p class="flex justify-start">
-                  <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-
-                  (11) 99999-0938
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99999-0938
+                  </a>
                 </p>
               </li>
-              <li class="mb-2">
+              <li>
                 <p class="flex justify-start">
                   <img src="/public/telephone_126341.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
-              <li class="mb-2">
+              <li class="mb-1">
                 <p>
                   Al. Joaquim Eugênio de Lima, 1281
                 </p>
@@ -286,28 +352,29 @@
                 </p>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Ver no mapa</a>
+                <a href="#" class="underline">Ver no mapa</a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h2 class="mb-3">Agência Vila Romana
-            </h2>
-            <ul class="">
-              <li class="lg:mb-2">
+            <h2 class="mb-3">Agência <span class="font-semibold">Vila Romana</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
                 <p class="flex justify-start">
-                  <img src="/public/whatsapp-brands.svg" class="mr-1" alt="">
-                  (11) 93207-3204
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 93207-3204
+                  </a>
                 </p>
               </li>
-              <li class="mb-2">
+              <li>
                 <p class="flex justify-start">
                   <img src="/public/telephone_126341.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
-              <li class="mb-2">
+              <li class="mb-1">
                 <p>
                   R. Tito, 766
                 </p>
@@ -318,11 +385,10 @@
                   São Paulo - SP</p>
               </li>
               <li class="mb-2">
-                <a href="#" class="hover:underline">Ver no mapa</a>
+                <a href="#" class="underline">Ver no mapa</a>
               </li>
             </ul>
           </div>
-
         </div>
       </div>
 
@@ -330,7 +396,7 @@
       <img src="/public/blur-vermelho-1.svg" alt="logo Gukenz" width="100%" height="100%" />
 
       <!-- HORÁRIOS -->
-      <div class='flex flex-col w-full justify-between items-stretch'>
+      <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
         <div class="grid lg:grid-cols-4 grid-cols-1 lg:divide-x items-start justify-start w-full">
           <span class="text-center lg:text-sm">
             Segunda a sexta das 8h30 às 18h30
@@ -348,7 +414,7 @@
       </div>
 
       <!-- COPYRIGHT -->
-      <div class='flex flex-col w-full justify-between items-stretch pt-14'>
+      <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
         <div class='grid lg:flex w-full lg:justify-between py-8 gap-10'>
           <span class="text-sm text-center hidden lg:flex">CRECI 15.319-J - © Copyright 2023 - Zimmermann Imóveis LTDA -
             Todos os direitos reservados.</span>
@@ -367,6 +433,63 @@
       </div>
     </div>
   </footer>
+
+      <!-- BUSCA FOOTER -->
+<div class="max-w-6xl w-full lg:flex items-center justify-between pt-10 pb-32 hidden">
+  <div class="text flex-col flex items-center justify-center text-sm">
+    <p class="">Imóveis à venda em São Paulo:
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Água Branca <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Água Rasa <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Alto Da Boa Vista <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Alto Da Lapa <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Alto Da Mooca <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Alto De Pinheiros <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Americanópolis <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Barra Funda <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Bela Vista <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Belenzinho <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Bom Retiro <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Bosque Da Saúde <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Cambuci <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+      <span class="moreText hidden">
+      <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Cambuci <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+      </span>
+      </p>
+  <button class="read-more-btn cursor-pointer">Mostrar mais <i class="fa-solid fa-chevron-down"></i></button>
+  </div>
+  <!-- JAVA SCRIPT BUSCA -->
+    <script>
+      const readMoreBtn = document.querySelector(".read-more-btn");
+  const text = document.querySelector(".text");
+  readMoreBtn.addEventListener("click", (e) => {
+      text.classList.toggle("show-more");
+      if (readMoreBtn.innerText === "Mostrar mais") {
+          readMoreBtn.innerText = "Mostrar menos";
+      } else {
+          readMoreBtn.innerText = "Mostrar mais";
+      }
+  });
+    </script>
+  </div>
 
 </body>
 </html>
