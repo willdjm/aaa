@@ -14,11 +14,269 @@
 
 <body class="flex flex-col items-center justify-center w-full">
 
-    <!-- NAVBARFIXA OK -->
+      <!-- NAVBARAR -->
+      <nav class="w-full">
+        <div class="max-w-6xl mx-auto px-4 py-3 lg:px-0">
+          <div class="flex justify-between">
+              <div>
+                <a href="index.html" class="">
+                  <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+                </a>
+              </div>
+              <!-- Primary Navbar items -->
+              <div class="hidden md:flex items-center space-x-1">
+                <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden">
+                  <li>
+                    <a class="text-gray-400" href="index.html">Home</a>
+                  </li>
+        
+                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Imóveis</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-10 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="resultadoBusca.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Buscar Imóveis</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="avaliacaoImovel.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Avalie seu Imóvel</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="imoveisFavoritos.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Favoritos</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Imóveis Visualizados</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="indice.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Índice de imóveis</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+        
+                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Serviços</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-10 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="assessoriaFinanciamento.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Financiamento</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="assessoriaJuridica.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Assessoria Jurídica</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Proposta de Compra</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Autorização de Venda</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Autorização de Publicidade</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+        
+                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Institucional</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-10 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="institucional.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Sobre a Zimmermann</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="areasdeatuacao.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Área de Atuação</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Seja Corretor Associado</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="contact.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Contato</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-gray-400" href="blog.html">BLOG</a>
+                  </li>
+                  <li>
+                    <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                </ul>
+    
+              </div>
+          
+    
+            <!-- Mobile menu button -->
+            <div class="lg:hidden flex items-center">
+              <button class="outline-none mobile-menu-button">
+                <i class="fa-solid fa-bars text-2xl">x</i>
+            </button>
+            </div>
+          </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu bg-black mt-3">
+          <div class="py-4 px-4 gap-2 flex flex-col">
+            <p><a class="text-red-700 uppercase" href="index.html">Home</a></p>
+            <p><a class="text-white" href="blog.html">BLOG</a></p>
+            <p><a class="text-white" href="blog.html">Politica de Privacidade</a></p>
+            <p><a class="text-white" href="blog.html">Termos de Uso</a></p>
+            <p class="text-white mb-1">Imóveis</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="resultadoBusca.html">Buscar Imóveis</a></li>
+              <li><a class="text-white" href="">Cadastre Seu Imóvel</a></li>
+              <li><a class="text-white" href="avaliacaoImovel.html">Avalie seu Imóvel</a></li>
+              <li><a class="text-white" href="imoveisFavoritos.html">Favoritos</a></li>
+              <li><a class="text-white" href="">Imóveis Visualizados</a></li>
+              <li><a class="text-white" href="indice.html">Índice de imóveis</a></li>
+            </ul>
+            <p class="text-white mb-1">Serviços</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="assessoriaFinanciamento.html">Financiamento</a></li>
+              <li><a class="text-white" href="assessoriaJuridica.html">Assessoria Jurídica</a></li>
+              <li><a class="text-white" href="#">Proposta de Compra</a></li>
+              <li><a class="text-white" href="#">Autorização de Venda</a></li>
+              <li><a class="text-white" href="#">Autorização de Publicidade</a></li>
+            </ul>
+            <p class="text-white mb-1">Institucional</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="institucional.html">Sobre a Zimmermann</a></li>
+              <li><a class="text-white" href="areasdeatuacao.html">Área de Atuação</a></li>
+              <li><a class="text-white" href="#">Seja Corretor Associado</a></li>
+              <li><a class="text-white" href="contact.html">Contato</a></li>
+            </ul>
+            <button type="button"
+              class="bg-red-700 h-10 w-44 rounded-md px-2 text-white flex items-center justify-center ">
+              <a href="imoveisFavoritos.html" class="flex items-center justify-center gap-2">
+                <p>Favoritos |</p>
+                <p>00</p>
+                <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+              </a>
+            </button>
+            <div class="flex gap-6">
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <script>
+          const btn = document.querySelector("button.mobile-menu-button");
+          const menu = document.querySelector(".mobile-menu");
+    
+          btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+          });
+        </script>
+        <!-- JAVA SCRIPT DROPDOWN -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+      </nav>
+
+<!-- NAVBARFIXA OK -->
 <div class="w-full">
   <!-- NAVBARFIXA DESKTOP -->
   <nav class="bg-red-700 fixed bottom-0 z-50 justify-center items-center w-full hidden lg:flex">
-    <div class="lg:w-2/5 flex items-center justify-end mt-1">
+    <div class="lg:w-2/5 flex items-center justify-between">
       <a href="index.html">
         <img class="cursor-pointer" src="/public/logo-footer.png" width="100%" height="100%" alt="...">
       </a>
@@ -66,7 +324,7 @@
   </nav>
   <!-- NAVBARFIXA MOBILE -->
   <nav class="flex fixed bottom-0 z-50 bg-green-500 justify-center items-center w-full lg:hidden">
-    <div class="w-full justify-center h-full flex items-center">
+    <div class="w-full justify-between h-full flex items-center">
       <a href="index.html">
         <img class="cursor-pointer" src="/public/logo-barra-mobile.png" alt="...">
       </a>
@@ -77,13 +335,12 @@
   </nav>
 </div>
 
-
   <!-- BANNER -->
   <section class="w-full flex flex-col justify-center items-center pt-10 px-5">
     <div class='max-w-6xl flex flex-col w-full justify-between items-stretch'>
       <div class="relative flex items-center justify-center">
-        <img src="/public/bannerInstitucional.svg" class="h-full w-full hidden lg:flex" alt="" />
-        <img src="/public/bannerInstitucionalMobile.svg" class="h-full w-full flex lg:hidden" alt="" />
+        <img src="/public/bannerInstitucional.svg" class="h-full w-full hidden md:flex" alt="" />
+        <img src="/public/bannerInstitucionalMobile.svg" class="h-full w-full flex md:hidden" alt="" />
         <div class="absolute -bottom-3 flex items-center justify-end">
           <h1 class="lg:text-3xl text-xl text-white uppercase">Sobre a Zimmermann</h1>
         </div>
@@ -114,10 +371,10 @@
 
   <!-- PRINCIPIOS E VALORES -->
   <section class="relative lg:flex items-center justify-end">
-    <div class="items-center w-full justify-center lg:flex">
+    <div class="items-center w-full justify-center md:flex">
       <div class="w-full h-full lg:flex">
-        <img src="/public/bannerPrincipiosValores.svg" alt="" class="hidden lg:flex">
-        <img src="/public/bannerPrincipiosValoresMobile.svg" alt="" class="flex lg:hidden">
+        <img src="/public/bannerPrincipiosValores.svg" alt="" class="hidden md:flex">
+        <img src="/public/bannerPrincipiosValoresMobile.svg" alt="" class="flex md:hidden">
       </div>
     </div>
     <div class="lg:absolute flex flex-col lg:w-3/5 h-full bg-red-800 py-16 lg:bg-opacity-70">
@@ -170,8 +427,8 @@
   <section class="relative flex items-center justify-end">
     <div class="items-center w-full justify-center flex">
       <div class="w-full flex">
-        <img src="/public/BannerInstitucional2.svg" alt="" class="hidden lg:flex">
-        <img src="/public/BannerInstitucional2Mobile.svg" alt="" class="flex lg:hidden">
+        <img src="/public/BannerInstitucional2.svg" alt="" class="hidden md:flex">
+        <img src="/public/BannerInstitucional2Mobile.svg" alt="" class="flex md:hidden">
       </div>
     </div>
     <div class="absolute flex items-center justify-center w-full h-full px-3">
@@ -239,60 +496,79 @@
     </div>
   </section>
 
-  <!-- EQUIPE -->
-  <div class="w-full bg-red-700 lg:flex items-center justify-center lg:h-48 lg:space-y-5">
-    <div class="lg:w-2/3 flex w-full items-center justify-center lg:pl-44 px-4">
-      <h3 class="uppercase text-white text-xl py-5 lg:w-32">
-        Equipe
-      </h3>
+      <!-- BARRA ETAPAS DE FINANCIAMENTO -->
+      <div class=" justify-center items-center w-full lg:flex bg-gray-300">
+        <div class="relative flex flex-col lg:flex-wrap items-center justify-center w-full">
+          <img src="/public/barraEtapaFinanciamento.png" class="h-full w-full hidden md:flex" alt="" />
+          <img src="/public/barraEtapaFinanciamentoMobile.png" class="h-full w-full md:hidden flex" alt="" />
+          <div class="absolute flex items-center justify-center w-full">
+            <div class="w-full flex items-center justify-center px-4">
+              <h3 class="max-w-xs w-40 flex py-5 lg:text-3xl text-2xl uppercase text-white text-left">
+                Equipe
+              </h3>
+            </div>
+            <div class="w-full md:flex md:flex-col items-start md:justify-start hidden lg:relative lg:right-16">
+              <p class="lg:max-w-2xl lg:text-base text-sm">
+                A Zimmermann é composta por uma equipe interdisciplinar que atua de forma coordenada com ética, eficiência,
+                experiência e dinamismo.
+              </p>
+              <p class="max-w-md text-sm lg:text-base">
+                Em nossos números, temos:
+              </p>
+                </div>
+          </div>
+          
+      </div>
+      <div class="w-full flex flex-col py-5 gap-2 md:hidden px-4  ">
+        <p class="lg:max-w-2xl text-center">
+          A Zimmermann é composta por uma equipe interdisciplinar que atua de forma coordenada com ética, eficiência,
+          experiência e dinamismo.
+        </p>
+        <p class="max-w-md text-center">
+          Em nossos números, temos:
+        </p>
     </div>
-    <div
-      class="w-full bg-gray-300 lg:justify-start justify-center px-4 flex flex-col py-5 items-center lg:items-start gap-5 h-full lg:pl-20 rounded-tl-md">
-      <p class="max-w-2xl">
-        A Zimmermann é composta por uma equipe interdisciplinar que atua de forma coordenada com ética, eficiência,
-        experiência e dinamismo.
-      </p>
-      <p class="max-w-md">
-        Em nossos números, temos:
-      </p>
-    </div>
-  </div>
+      </div>
 
   <!-- EQUIPE2 -->
-  <section class="lg:flex w-full justify-center items-center px-5 bg-gray-300">
-    <div class='lg:justify-center items-center grid lg:max-w-6xl'>
-      <div class="flex flex-col items-center w-full justify-center pb-20">
+  <section class="md:flex w-full justify-center items-center px-5 bg-gray-300">
+    <div class='md:justify-center items-center grid md:max-w-6xl'>
+      <div class="flex flex-col items-end w-full justify-end pb-5">
         <div
-          class="w-full max-w-3xl lg:justify-end lg:gap-36 items-center justify-center flex flex-col lg:flex lg:flex-row">
-          <div
-            class="h-44 w-44 border-4 text-white shadow-md gap-1 shadow-black bg-red-700 border-white text-sm flex flex-col text-center items-center justify-center rounded-full">
-            <img src="/public/icon-corretor.svg" alt="">
-            <p>
-              Mais de
-            </p>
-            <p class="text-xl">
-              100 corretores
-            </p>
-            <p>
-              associados
-            </p>
-          </div>
-          <div
-            class="h-44 w-44 border-4 text-white shadow-md gap-1 shadow-black bg-red-700 border-white text-sm flex flex-col text-center items-center justify-center rounded-full">
-            <img src="/public/icon-imovel.svg" alt="">
-            <p>
-              Mais de
-            </p>
-            <p class="text-xl">
-              12 mil imóveis
-            </p>
-            <p>
-              em seu cadastro
-            </p>
-          </div>
+          class="lg:max-w-2xl md:max-w-md md:flex lg:items-end lg:justify-end w-full py-5">
+<div class="items-start justify-start flex w-full">
+  <div
+  class="h-44 w-44 border-4 text-white shadow-md gap-1 shadow-black bg-red-700 border-white text-sm flex flex-col text-center items-center justify-center rounded-full">
+  <img src="/public/icon-corretor.svg" alt="">
+  <p>
+    Mais de
+  </p>
+  <p class="text-xl">
+    100 corretores
+  </p>
+  <p>
+    associados
+  </p>
+  </div>
+</div>
+<div class="items-end md:items-center justify-end md:justify-center md:relative md:right-7 flex w-full">
+<div
+  class="h-44 w-44 relative border-4 text-white shadow-md gap-1 shadow-black bg-red-700 border-white text-sm flex flex-col text-center items-center justify-center rounded-full">
+  <img src="/public/icon-imovel.svg" alt="">
+  <p>
+    Mais de
+  </p>
+  <p class="text-xl">
+    12 mil imóveis
+  </p>
+  <p>
+    em seu cadastro
+  </p>
+</div>
+</div>
         </div>
         <div class="w-full justify-between items-center flex flex-col">
-          <div class="w-full max-w-6xl flex flex-col lg:flex lg:flex-row items-center justify-center gap-10 py-10">
+          <div class="w-full max-w-6xl flex flex-col md:flex md:flex-row items-start justify-center lg:gap-10 py-10">
 
             <div class="flex flex-col lg:w-1/2 justify-center gap-4 text-center lg:text-left">
               <h3 class=" text-red-700 uppercase lg:max-w-xs">Expertise de quem conhece a região em que atua
@@ -327,8 +603,8 @@
   </section>
 
   <!-- ESTRUTURA DE ATENDIMENTO -->
-  <section class="relative lg:flex items-center justify-center px-5 lg:px-0">
-    <div class="items-center w-full justify-center lg:flex">
+  <section class="relative md:flex items-center justify-center w-full">
+    <div class="items-center w-full justify-center pt-5 lg:flex px-4">
       <div class="flex w-full lg:pl-96 flex-col lg:p-20 gap-5">
         <h3 class="text-red-700 uppercase">Estrutura de Atendimento</h3>
         <p class="">
@@ -352,20 +628,20 @@
       </div>
     </div>
 
-    <div class="absolute -bottom-3 lg:flex lg:items-center lg:justify-end">
-      <img src="/public/sombraInstitucional.svg" alt="">
+    <div class="absolute -bottom-3 md:flex md:items-center md:justify-end">
+      <img src="/public/sombraInstitucional.svg" alt="" class="hidden md:flex">
+      <img src="/public/sombraInstitucionalMobile.png" alt="" class="flex md:hidden">
     </div>
 
-    <div class="absolute bottom-0 lg:flex lg:flex-col lg:items-end lg:justify-end">
-      <h1 class="text-3xl text-white uppercase">Servir a todos os nossos clientes</h1>
-      <h1 class="text-3xl text-white uppercase lg:w-10 lg:text-right flex lg:items-end lg:justify-end">com excelência.
-      </h1>
+    <div class="absolute bottom-0 md:flex md:items-end md:justify-end w-full items-center justify-center flex-col md:max-w-2xl">
+      <h1 class="md:text-5xl text-white uppercase items-center justify-center flex md:items-end md:justify-end md:text-center">Servir <span class="md:text-2xl">a todos os nossos clientes</span></h1>
+      <h1 class="md:text-3xl text-white uppercase md:w-10 md:flex-col items-center justify-center md:text-right flex md:items-end md:justify-end">com <span class="md:text-4xl"> excelência.</span></h1>
     </div>
   </section>
 
   <!-- ATENDIMENTO -->
   <section class="lg:flex w-full justify-center items-center px-5 py-5 lg:pt-10 relative z-30 max-w-6xl">
-    <div class="lg:flex lg:items-start items-center justify-center">
+    <div class="md:flex lg:items-start items-center justify-center">
 
       <div class="w-full items-center lg:items-start justify-center flex flex-col">
         <img src="/public/icon-online.svg" alt="logo Gukenz" />
@@ -394,7 +670,7 @@
 
   <!-- AREA DE ATUACAO -->
   <section class="flex w-full max-w-6xl justify-center items-center px-5 pb-5 lg:pb-10 relative z-30">
-    <div class="bg-red-700 lg:flex p-2 mt-20">
+    <div class="bg-red-700 md:flex p-2 mt-20">
       <div class="p-10 flex flex-col gap-5 w-full items-start justify-center">
         <h2 class="text-white uppercase">
           A Zimmermann hoje atende 47 bairros da Capital.
@@ -411,7 +687,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-5">
+  <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-10">
     <div class='lg:justify-between justify-center w-full items-center flex flex-col'>
       <!-- ACESSO -->
       <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
@@ -419,7 +695,7 @@
           <span class="flex items-center justify-center mr-4">ACESSO</span>
           <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
         </div>
-        <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4 lg:pl-0">
+        <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4">
           <div>
             <h2 class="mb-3">
               <a href="index.html">Home</a>
@@ -525,7 +801,7 @@
           <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
         </div>
 
-        <div class="grid grid-cols-1 gap-8 py-10 md:grid-cols-4 pl-5 lg:pl-0">
+        <div class="grid grid-cols-1 gap-8 py-10 md:grid-cols-4">
           <div>
             <h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
             <ul class="flex flex-col gap-3">
