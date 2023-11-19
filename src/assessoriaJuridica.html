@@ -14,11 +14,269 @@
 
 <body class="flex flex-col items-center justify-center w-full">
 
-    <!-- NAVBARFIXA OK -->
+      <!-- NAVBARAR -->
+      <nav class="w-full">
+        <div class="max-w-6xl mx-auto px-4 py-3 lg:px-0">
+          <div class="flex justify-between">
+              <div>
+                <a href="index.html" class="">
+                  <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+                </a>
+              </div>
+              <!-- Primary Navbar items -->
+              <div class="hidden md:flex items-center space-x-1">
+                <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden">
+                  <li>
+                    <a class="text-gray-400" href="index.html">Home</a>
+                  </li>
+        
+                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Imóveis</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-10 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="resultadoBusca.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Buscar Imóveis</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="avaliacaoImovel.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Avalie seu Imóvel</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="imoveisFavoritos.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Favoritos</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Imóveis Visualizados</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="indice.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Índice de imóveis</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+        
+                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Serviços</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-10 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="assessoriaFinanciamento.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Financiamento</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="assessoriaJuridica.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Assessoria Jurídica</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Proposta de Compra</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Autorização de Venda</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Autorização de Publicidade</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+        
+                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+                    <a href="#"
+                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                      @click.prevent="showChildren=!showChildren">
+                      <span>Institucional</span>
+                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+                    </a>
+        
+                    <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                      x-transition:enter="transition ease duration-300 transform"
+                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                      x-transition:leave="transition ease duration-300 transform"
+                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                      style="display: none;">
+                      <div class="bg-white rounded w-full relative z-10 py-1">
+                        <ul class="list-reset">
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="institucional.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Sobre a Zimmermann</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="areasdeatuacao.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Área de Atuação</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="#"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Seja Corretor Associado</span> </a>
+                          </li>
+                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                            @mouseenter="showChildren=true">
+                            <a href="contact.html"
+                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                              <span class="flex-1">Contato</span> </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-gray-400" href="blog.html">BLOG</a>
+                  </li>
+                  <li>
+                    <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                </ul>
+    
+              </div>
+          
+    
+            <!-- Mobile menu button -->
+            <div class="lg:hidden flex items-center">
+              <button class="outline-none mobile-menu-button">
+                <i class="fa-solid fa-bars text-2xl">x</i>
+            </button>
+            </div>
+          </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu bg-black mt-3">
+          <div class="py-4 px-4 gap-2 flex flex-col">
+            <p><a class="text-red-700 uppercase" href="index.html">Home</a></p>
+            <p><a class="text-white" href="blog.html">BLOG</a></p>
+            <p><a class="text-white" href="blog.html">Politica de Privacidade</a></p>
+            <p><a class="text-white" href="blog.html">Termos de Uso</a></p>
+            <p class="text-white mb-1">Imóveis</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="resultadoBusca.html">Buscar Imóveis</a></li>
+              <li><a class="text-white" href="">Cadastre Seu Imóvel</a></li>
+              <li><a class="text-white" href="avaliacaoImovel.html">Avalie seu Imóvel</a></li>
+              <li><a class="text-white" href="imoveisFavoritos.html">Favoritos</a></li>
+              <li><a class="text-white" href="">Imóveis Visualizados</a></li>
+              <li><a class="text-white" href="indice.html">Índice de imóveis</a></li>
+            </ul>
+            <p class="text-white mb-1">Serviços</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="assessoriaFinanciamento.html">Financiamento</a></li>
+              <li><a class="text-white" href="assessoriaJuridica.html">Assessoria Jurídica</a></li>
+              <li><a class="text-white" href="#">Proposta de Compra</a></li>
+              <li><a class="text-white" href="#">Autorização de Venda</a></li>
+              <li><a class="text-white" href="#">Autorização de Publicidade</a></li>
+            </ul>
+            <p class="text-white mb-1">Institucional</p>
+            <ul class="ml-5 flex flex-col gap-1">
+              <li><a class="text-white" href="institucional.html">Sobre a Zimmermann</a></li>
+              <li><a class="text-white" href="areasdeatuacao.html">Área de Atuação</a></li>
+              <li><a class="text-white" href="#">Seja Corretor Associado</a></li>
+              <li><a class="text-white" href="contact.html">Contato</a></li>
+            </ul>
+            <button type="button"
+              class="bg-red-700 h-10 w-44 rounded-md px-2 text-white flex items-center justify-center ">
+              <a href="imoveisFavoritos.html" class="flex items-center justify-center gap-2">
+                <p>Favoritos |</p>
+                <p>00</p>
+                <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+              </a>
+            </button>
+            <div class="flex gap-6">
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+              <a class="text-white text-2xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <script>
+          const btn = document.querySelector("button.mobile-menu-button");
+          const menu = document.querySelector(".mobile-menu");
+    
+          btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+          });
+        </script>
+        <!-- JAVA SCRIPT DROPDOWN -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+      </nav>
+
+<!-- NAVBARFIXA OK -->
 <div class="w-full">
   <!-- NAVBARFIXA DESKTOP -->
   <nav class="bg-red-700 fixed bottom-0 z-50 justify-center items-center w-full hidden lg:flex">
-    <div class="lg:w-2/5 flex items-center justify-end mt-1">
+    <div class="lg:w-2/5 flex items-center justify-between">
       <a href="index.html">
         <img class="cursor-pointer" src="/public/logo-footer.png" width="100%" height="100%" alt="...">
       </a>
@@ -66,7 +324,7 @@
   </nav>
   <!-- NAVBARFIXA MOBILE -->
   <nav class="flex fixed bottom-0 z-50 bg-green-500 justify-center items-center w-full lg:hidden">
-    <div class="w-full justify-center h-full flex items-center">
+    <div class="w-full justify-between h-full flex items-center">
       <a href="index.html">
         <img class="cursor-pointer" src="/public/logo-barra-mobile.png" alt="...">
       </a>
@@ -76,7 +334,6 @@
     </div>
   </nav>
 </div>
-
 
     <!-- BANNER -->
     <section class="w-full flex flex-col justify-center items-center pt-10 px-5">
@@ -144,14 +401,14 @@
 
         <!-- CIRCULOS COM TEXTO -->
         <div
-            class='max-w-5xl grid grid-cols-2 lg:grid-cols-4 gap-5 w-full justify-between items-center pt-10 pb-20 lg:pb-0'>
+            class='max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-5 w-full justify-between items-center pt-10 pb-20 md:pb-0'>
             <p
                 class="h-44 w-44 border-2 shadow-md shadow-black border-white text-sm flex p-5 text-center items-center justify-center rounded-full">
                 Pendências quanto
                 ao registro ou confecção do título aquisitivo (escritura).
             </p>
             <p
-                class="h-44 w-44 border-2 shadow-md shadow-black border-white text-sm flex p-5 text-center items-center relative top-8 lg:top-0 justify-center rounded-full">
+                class="h-44 w-44 border-2 shadow-md shadow-black border-white text-sm flex p-5 text-center items-center relative top-8 md:top-0 justify-center rounded-full">
                 Imóveis em inventários, partilhas ou sobre partilhas.
             </p>
             <p
@@ -160,7 +417,7 @@
                 a prefeitura, secretarias e órgãos de Estado..
             </p>
             <p
-                class="h-44 w-44 border-2 shadow-md shadow-black border-white text-sm flex p-5 text-center items-center relative top-8 lg:top-0 justify-center rounded-full">
+                class="h-44 w-44 border-2 shadow-md shadow-black border-white text-sm flex p-5 text-center items-center relative top-8 md:top-0 justify-center rounded-full">
                 Pendentes de alvarás, permissões de uso entre outros.
             </p>
         </div>
@@ -169,26 +426,38 @@
         <img src="/public/blur-vermelho-1.svg" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
     </section>
 
-    <!-- BARRA DOCUMENTAÇÃO NECESSÁRIA -->
-    <div class="w-full bg-red-700 lg:flex items-center justify-center lg:h-48 lg:space-y-5">
-        <div class="lg:w-2/3 flex items-center lg:justify-center lg:pl-44 px-4">
-            <h3 class="uppercase text-white text-xl py-5 lg:w-32">
-                Documentação Necessária
-            </h3>
+        <!-- BARRA ETAPAS DE FINANCIAMENTO -->
+        <div class=" justify-center items-center w-full lg:flex bg-gray-300">
+          <div class="relative flex flex-col lg:flex-wrap items-center justify-center w-full">
+            <img src="/public/barraEtapaFinanciamento.png" class="h-full w-full hidden md:flex" alt="" />
+            <img src="/public/barraEtapaFinanciamentoMobile.png" class="h-full w-full md:hidden flex" alt="" />
+            <div class="absolute flex items-center justify-center w-full">
+              <div class="w-full flex lg:items-center lg:justify-center px-4">
+                <h3 class="max-w-xs w-40 flex py-5 lg:text-3xl text-2xl uppercase text-white text-left px-0 md:px-4 lg:px-0">
+                  Documentação Necessária
+                </h3>
+              </div>
+              <div class="w-full md:flex items-start md:justify-start hidden md:relative md:right-16">
+                      <h3 class="max-w-lg lg:text-lg md:text-sm py-5 md:text-center lg:text-left">
+                        Uma transação imobiliária passa por uma minuciosa análise documental antes de ser concretizada. Uma
+                        análise básica deve conter no mínimo os seguintes documentos:
+                      </h3>
+                  </div>
+            </div>
+            
         </div>
-        <div
-            class="w-full bg-gray-300 lg:justify-start justify-center px-4 flex items-center h-full lg:pl-20 rounded-tl-md">
-            <h3 class="lg:max-w-md py-5 text-left">
-                Uma transação imobiliária passa por uma minuciosa análise documental antes de ser concretizada. Uma
-                análise básica deve conter no mínimo os seguintes documentos:
-            </h3>
+        <div class="w-full flex items-start justify-start md:hidden px-4  ">
+          <h3 class="max-w-md text-lg py-5 text-center">
+              Indicamos abaixo, de uma forma resumida, as etapas do financiamento e os serviços prestados pela nossa
+              Assessoria de Financiamento.
+          </h3>
+      </div>
         </div>
-    </div>
 
     <!-- ETAPAS DOCUMENTAÇÃO NECESSÁRIA -->
     <section class="lg:flex w-full justify-center items-center px-5 bg-gray-300">
 
-        <div class='lg:justify-center items-center grid lg:max-w-6xl '>
+        <div class='lg:justify-center items-center grid lg:max-w-6xl px-4'>
 
             <div class="w-full justify-between items-center lg:flex lg:flex-col">
                 <div class="w-full lg:flex items-center justify-center gap-5 py-5">
@@ -319,289 +588,288 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer
-        class="bg-red-700 w-full flex flex-col justify-center items-center pt-32 pb-20 relative lg:-top-36 -top-24 text-white px-5">
-        <div class='lg:justify-between justify-center w-full items-center flex flex-col'>
-          <!-- ACESSO -->
-          <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
-            <div class="w-full items-center flex">
-              <span class="flex items-center justify-center mr-4">ACESSO</span>
-              <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
-            </div>
-            <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4 lg:pl-0">
-              <div>
-                <h2 class="mb-3">
-                  <a href="index.html">Home</a>
-                </h2>
-                <ul>
-                  <li class="mb-2">
-                    <a href="blog.html" class=" hover:underline">BLOG</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">Política de Privacidade</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">Termos de Uso</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 class="mb-3">Imóveis</h2>
-                <ul class="ml-4">
-                  <li class="mb-2">
-                    <a href="resultadoBusca.html" class=" hover:underline">Buscar Imóveis</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">Cadastre Seu Imóvel</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="avaliacaoImovel.html" class="hover:underline">Avalie seu Imóvel</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="imoveisFavoritos.html" class="hover:underline">Favoritos</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">Imóveis Visualizados</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="indice.html" class="hover:underline">Índice de Imóveis</a>
-                  </li>
-                </ul>
-              </div>
-    
-              <div>
-                <h2 class="mb-3">Serviços</h2>
-                <ul class="ml-4">
-                  <li class="mb-2">
-                    <a href="assessoriaFinanciamento.html" class=" hover:underline">Financiamento</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="assessoriaJuridica.html" class="hover:underline">Assessoria Jurídica</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">Proposta de Compra</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">Autorização de Venda</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">Autorização de Publicidade</a>
-                  </li>
-                </ul>
-              </div>
-    
-              <div>
-                <h2 class="mb-3">Institucional</h2>
-                <ul class="ml-4">
-                  <li class="mb-2">
-                    <a href="institucional.html" class=" hover:underline">Sobre a Zimmermann</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="areasdeatuacao.html" class="hover:underline">Área de Atuação</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="hover:underline">Seja Corretor Associado</a>
-                  </li>
-                  <li class="mb-2">
-                    <a href="contact.html" class="hover:underline">Contato</a>
-                  </li>
-                  <li class="mb-2 flex gap-5 text-white items-center ">
-                    <a href="#">
-                      <i class="fa-brands fa-instagram text-3xl text-white"></i>
-                    </a>
-                    <a href="#">
-                      <i class="fa-brands fa-facebook text-3xl text-white"></i>
-                    </a>
-                    <a href="#">
-                      <i class="fa-brands fa-linkedin text-3xl text-white"></i>
-                    </a>
-                    <a href="#">
-                      <i class="fa-brands fa-youtube text-3xl text-white"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+  <!-- FOOTER -->
+  <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-10">
+    <div class='lg:justify-between justify-center w-full items-center flex flex-col'>
+      <!-- ACESSO -->
+      <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
+        <div class="w-full items-center flex">
+          <span class="flex items-center justify-center mr-4">ACESSO</span>
+          <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
+        </div>
+        <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4">
+          <div>
+            <h2 class="mb-3">
+              <a href="index.html">Home</a>
+            </h2>
+            <ul>
+              <li class="mb-2">
+                <a href="blog.html" class=" hover:underline">BLOG</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Política de Privacidade</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Termos de Uso</a>
+              </li>
+            </ul>
           </div>
-    
-          <!-- SOMBRA -->
-          <img src="/public/blur-vermelho-1.svg" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
-    
-          <!-- NOSSAS UNIDADES -->
-          <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
-            <div class="w-full items-center flex">
-              <span class="flex items-center justify-center mr-4">NOSSAS UNIDADES</span>
-              <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
-            </div>
-    
-            <div class="grid grid-cols-1 gap-8 py-10 md:grid-cols-4 pl-5 lg:pl-0">
-              <div>
-                <h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
-                <ul class="flex flex-col gap-3">
-                  <li>
-                    <p class="flex justify-start">
-                      <a href="">
-                        <i class="fa-brands fa-whatsapp text-white text-xl"></i>
-                        (11) 99999-0938
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p class="flex justify-start">
-                      <img src="/public/telephone_126341.svg" class="mr-1" alt="">
-                      (11) 99999-0938
-                    </p>
-                  </li>
-                  <li class="mb-1">
-                    <p>R. Campevas, 341</p>
-                    <p>Perdizes - CEP 05016-010</p>
-                    <p>São Paulo - SP</p>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="underline">Ver no mapa</a>
-                  </li>
-                </ul>
-              </div>
-    
-              <div>
-                <h2 class="mb-3">Agência <span class="font-semibold">Pinheiros</span></h2>
-                <ul class="flex flex-col gap-3">
-                  <li>
-                    <p class="flex justify-start">
-                      <a href="">
-                        <i class="fa-brands fa-whatsapp text-white text-xl"></i>
-                        (11) 99939-9934
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p class="flex justify-start">
-                      <img src="/public/telephone_126341.svg" class="mr-1" alt="">
-                      (11) 99999-0938
-                    </p>
-                  </li>
-                  <li class="mb-1">
-                    <p>R. Simão Álvares, 464
-                    </p>
-                    <p>Pinheiros - CEP 05417-020
-                    </p>
-                    <p>São Paulo - SP</p>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="underline">Ver no mapa</a>
-                  </li>
-                </ul>
-              </div>
-    
-              <div>
-                <h2 class="mb-3">Agência <span class="font-semibold">Jardins</span></h2>
-                <ul class="flex flex-col gap-3">
-                  <li>
-                    <p class="flex justify-start">
-                      <a href="">
-                        <i class="fa-brands fa-whatsapp text-white text-xl"></i>
-                        (11) 99999-0938
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p class="flex justify-start">
-                      <img src="/public/telephone_126341.svg" class="mr-1" alt="">
-                      (11) 99999-0938
-                    </p>
-                  </li>
-                  <li class="mb-1">
-                    <p>
-                      Al. Joaquim Eugênio de Lima, 1281
-                    </p>
-                    <p>
-                      Jardim Paulista - CEP 01403-003
-                    </p>
-                    <p>
-                      São Paulo - SP
-                    </p>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="underline">Ver no mapa</a>
-                  </li>
-                </ul>
-              </div>
-    
-              <div>
-                <h2 class="mb-3">Agência <span class="font-semibold">Vila Romana</span></h2>
-                <ul class="flex flex-col gap-3">
-                  <li>
-                    <p class="flex justify-start">
-                      <a href="">
-                        <i class="fa-brands fa-whatsapp text-white text-xl"></i>
-                        (11) 93207-3204
-                      </a>
-                    </p>
-                  </li>
-                  <li>
-                    <p class="flex justify-start">
-                      <img src="/public/telephone_126341.svg" class="mr-1" alt="">
-                      (11) 99999-0938
-                    </p>
-                  </li>
-                  <li class="mb-1">
-                    <p>
-                      R. Tito, 766
-                    </p>
-                    <p>
-                      Vila Romana - CEP 05051-000
-                    </p>
-                    <p>
-                      São Paulo - SP</p>
-                  </li>
-                  <li class="mb-2">
-                    <a href="#" class="underline">Ver no mapa</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div>
+            <h2 class="mb-3">Imóveis</h2>
+            <ul class="ml-4">
+              <li class="mb-2">
+                <a href="resultadoBusca.html" class=" hover:underline">Buscar Imóveis</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Cadastre Seu Imóvel</a>
+              </li>
+              <li class="mb-2">
+                <a href="avaliacaoImovel.html" class="hover:underline">Avalie seu Imóvel</a>
+              </li>
+              <li class="mb-2">
+                <a href="imoveisFavoritos.html" class="hover:underline">Favoritos</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Imóveis Visualizados</a>
+              </li>
+              <li class="mb-2">
+                <a href="indice.html" class="hover:underline">Índice de Imóveis</a>
+              </li>
+            </ul>
           </div>
-    
-          <!-- SOMBRA -->
-          <img src="/public/blur-vermelho-1.svg" alt="logo Gukenz" width="100%" height="100%" />
-    
-          <!-- HORÁRIOS -->
-          <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
-            <div class="grid md:grid-cols-4 grid-cols-1 lg:divide-x items-start justify-start w-full">
-              <span class="text-center lg:text-sm">
-                Segunda a sexta das 8h30 às 18h30
-              </span>
-              <span class="text-center lg:text-sm">
-                Sábado e feriados das 8h30 às 13h30
-              </span>
-              <span class="text-center lg:text-sm">
-                Domingos das 9h às 13h (plantão online)
-              </span>
-              <span class="text-center lg:text-sm">
-                Atendimento online todos os dias.
-              </span>
-            </div>
+
+          <div>
+            <h2 class="mb-3">Serviços</h2>
+            <ul class="ml-4">
+              <li class="mb-2">
+                <a href="assessoriaFinanciamento.html" class=" hover:underline">Financiamento</a>
+              </li>
+              <li class="mb-2">
+                <a href="assessoriaJuridica.html" class="hover:underline">Assessoria Jurídica</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Proposta de Compra</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Autorização de Venda</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Autorização de Publicidade</a>
+              </li>
+            </ul>
           </div>
-    
-          <!-- COPYRIGHT -->
-          <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
-            <div class='grid lg:flex w-full lg:justify-between py-8 gap-10'>
-              <span class="text-sm text-center lg:flex">CRECI 15.319-J - © Copyright 2023 - Zimmermann Imóveis LTDA -
-                Todos os direitos reservados.</span>
-              <div class='flex gap-10 items-end justify-center'>
-                <a href="https://sacorp.tec.br/?utm_source=www.mayerbastoscostaadv.com.br&utm_medium=banner&utm_campaign=slogan"
-                  target='_blank' rel="noreferrer">
-                  <img src="/public/logo-sacorp.svg" alt="logo Sacorp" width="100%" height="100%" loading="lazy" />
+
+          <div>
+            <h2 class="mb-3">Institucional</h2>
+            <ul class="ml-4">
+              <li class="mb-2">
+                <a href="institucional.html" class=" hover:underline">Sobre a Zimmermann</a>
+              </li>
+              <li class="mb-2">
+                <a href="areasdeatuacao.html" class="hover:underline">Área de Atuação</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="hover:underline">Seja Corretor Associado</a>
+              </li>
+              <li class="mb-2">
+                <a href="contact.html" class="hover:underline">Contato</a>
+              </li>
+              <li class="mb-2 flex gap-5 text-white items-center ">
+                <a href="#">
+                  <i class="fa-brands fa-instagram text-3xl text-white"></i>
                 </a>
-                <a href="https://www.gukenz.com.br/" target='_blank' rel="noreferrer">
-                  <img src="/public/logo-gukenz.svg" alt="logo Gukenz" width="100%" height="100%" />
+                <a href="#">
+                  <i class="fa-brands fa-facebook text-3xl text-white"></i>
                 </a>
-              </div>
-            </div>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin text-3xl text-white"></i>
+                </a>
+                <a href="#">
+                  <i class="fa-brands fa-youtube text-3xl text-white"></i>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-    </footer>
+      </div>
+
+      <!-- SOMBRA -->
+      <img src="/public/blur-vermelho-1.svg" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
+
+      <!-- NOSSAS UNIDADES -->
+      <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
+        <div class="w-full items-center flex">
+          <span class="flex items-center justify-center mr-4">NOSSAS UNIDADES</span>
+          <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 py-10 md:grid-cols-4">
+          <div>
+            <h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <p class="flex justify-start">
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99999-0938
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p class="flex justify-start">
+                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  (11) 99999-0938
+                </p>
+              </li>
+              <li class="mb-1">
+                <p>R. Campevas, 341</p>
+                <p>Perdizes - CEP 05016-010</p>
+                <p>São Paulo - SP</p>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="underline">Ver no mapa</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="mb-3">Agência <span class="font-semibold">Pinheiros</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <p class="flex justify-start">
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99939-9934
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p class="flex justify-start">
+                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  (11) 99999-0938
+                </p>
+              </li>
+              <li class="mb-1">
+                <p>R. Simão Álvares, 464
+                </p>
+                <p>Pinheiros - CEP 05417-020
+                </p>
+                <p>São Paulo - SP</p>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="underline">Ver no mapa</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="mb-3">Agência <span class="font-semibold">Jardins</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <p class="flex justify-start">
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 99999-0938
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p class="flex justify-start">
+                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  (11) 99999-0938
+                </p>
+              </li>
+              <li class="mb-1">
+                <p>
+                  Al. Joaquim Eugênio de Lima, 1281
+                </p>
+                <p>
+                  Jardim Paulista - CEP 01403-003
+                </p>
+                <p>
+                  São Paulo - SP
+                </p>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="underline">Ver no mapa</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="mb-3">Agência <span class="font-semibold">Vila Romana</span></h2>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <p class="flex justify-start">
+                  <a href="">
+                    <i class="fa-brands fa-whatsapp text-white text-xl"></i>
+                    (11) 93207-3204
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p class="flex justify-start">
+                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  (11) 99999-0938
+                </p>
+              </li>
+              <li class="mb-1">
+                <p>
+                  R. Tito, 766
+                </p>
+                <p>
+                  Vila Romana - CEP 05051-000
+                </p>
+                <p>
+                  São Paulo - SP</p>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="underline">Ver no mapa</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOMBRA -->
+      <img src="/public/blur-vermelho-1.svg" alt="logo Gukenz" width="100%" height="100%" />
+
+      <!-- HORÁRIOS -->
+      <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
+        <div class="grid md:grid-cols-4 grid-cols-1 lg:divide-x items-start justify-start w-full">
+          <span class="text-center lg:text-sm">
+            Segunda a sexta das 8h30 às 18h30
+          </span>
+          <span class="text-center lg:text-sm">
+            Sábado e feriados das 8h30 às 13h30
+          </span>
+          <span class="text-center lg:text-sm">
+            Domingos das 9h às 13h (plantão online)
+          </span>
+          <span class="text-center lg:text-sm">
+            Atendimento online todos os dias.
+          </span>
+        </div>
+      </div>
+
+      <!-- COPYRIGHT -->
+      <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
+        <div class='grid lg:flex w-full lg:justify-between py-8 gap-10'>
+          <span class="text-sm text-center lg:flex">CRECI 15.319-J - © Copyright 2023 - Zimmermann Imóveis LTDA -
+            Todos os direitos reservados.</span>
+          <div class='flex gap-10 items-end justify-center'>
+            <a href="https://sacorp.tec.br/?utm_source=www.mayerbastoscostaadv.com.br&utm_medium=banner&utm_campaign=slogan"
+              target='_blank' rel="noreferrer">
+              <img src="/public/logo-sacorp.svg" alt="logo Sacorp" width="100%" height="100%" loading="lazy" />
+            </a>
+            <a href="https://www.gukenz.com.br/" target='_blank' rel="noreferrer">
+              <img src="/public/logo-gukenz.svg" alt="logo Gukenz" width="100%" height="100%" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
         <!-- BUSCA FOOTER -->
         <div class="max-w-6xl w-full lg:flex items-center justify-between py-16 hidden relative -top-40">
