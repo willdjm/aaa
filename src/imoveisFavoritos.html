@@ -14,16 +14,1161 @@
 
 <body class="flex flex-col items-center justify-center w-full">
 
+  <!-- NAVBARAR -->
+  <nav class="w-full">
+    <div class="max-w-6xl mx-auto px-4 py-3 lg:px-0">
+      <div class="flex justify-between">
+        <div>
+          <a href="index.html" class="">
+            <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+          </a>
+        </div>
+        <!-- Primary Navbar items -->
+        <div class="hidden md:flex items-center space-x-1">
+          <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden">
+            <li>
+              <a class="text-gray-400" href="index.html">Home</a>
+            </li>
+
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Imóveis</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+
+              <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="resultadoBusca.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Buscar Imóveis</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="avaliacaoImovel.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Avalie seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="imoveisFavoritos.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Favoritos</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Imóveis Visualizados</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="indice.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Índice de imóveis</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Serviços</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaFinanciamento.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Financiamento</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaJuridica.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Assessoria Jurídica</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Proposta de Compra</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Venda</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Publicidade</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Institucional</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="institucional.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Sobre a Zimmermann</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="areasdeatuacao.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Área de Atuação</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Seja Corretor Associado</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="contact.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Contato</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="text-gray-400" href="blog.html">BLOG</a>
+            </li>
+            <li>
+              <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="lg:hidden flex items-center">
+          <button class="outline-none mobile-menu-button">
+            <i class="fa-solid fa-bars text-2xl">x</i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="hidden mobile-menu bg-black mt-3">
+      <div class="py-4 px-4 gap-2 flex flex-col">
+        <p><a class="text-red-700 uppercase" href="index.html">Home</a></p>
+        <p><a class="text-white" href="blog.html">BLOG</a></p>
+        <p><a class="text-white" href="blog.html">Politica de Privacidade</a></p>
+        <p><a class="text-white" href="blog.html">Termos de Uso</a></p>
+        <p class="text-white mb-1">Imóveis</p>
+        <ul class="ml-5 flex flex-col gap-1">
+          <li><a class="text-white" href="resultadoBusca.html">Buscar Imóveis</a></li>
+          <li><a class="text-white" href="">Cadastre Seu Imóvel</a></li>
+          <li><a class="text-white" href="avaliacaoImovel.html">Avalie seu Imóvel</a></li>
+          <li><a class="text-white" href="imoveisFavoritos.html">Favoritos</a></li>
+          <li><a class="text-white" href="">Imóveis Visualizados</a></li>
+          <li><a class="text-white" href="indice.html">Índice de imóveis</a></li>
+        </ul>
+        <p class="text-white mb-1">Serviços</p>
+        <ul class="ml-5 flex flex-col gap-1">
+          <li><a class="text-white" href="assessoriaFinanciamento.html">Financiamento</a></li>
+          <li><a class="text-white" href="assessoriaJuridica.html">Assessoria Jurídica</a></li>
+          <li><a class="text-white" href="#">Proposta de Compra</a></li>
+          <li><a class="text-white" href="#">Autorização de Venda</a></li>
+          <li><a class="text-white" href="#">Autorização de Publicidade</a></li>
+        </ul>
+        <p class="text-white mb-1">Institucional</p>
+        <ul class="ml-5 flex flex-col gap-1">
+          <li><a class="text-white" href="institucional.html">Sobre a Zimmermann</a></li>
+          <li><a class="text-white" href="areasdeatuacao.html">Área de Atuação</a></li>
+          <li><a class="text-white" href="#">Seja Corretor Associado</a></li>
+          <li><a class="text-white" href="contact.html">Contato</a></li>
+        </ul>
+        <button type="button" class="bg-red-700 h-10 w-44 rounded-md px-2 text-white flex items-center justify-center ">
+          <a href="imoveisFavoritos.html" class="flex items-center justify-center gap-2">
+            <p>Favoritos |</p>
+            <p>00</p>
+            <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+          </a>
+        </button>
+        <div class="flex gap-6">
+          <a class="text-white text-2xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+          <a class="text-white text-2xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a class="text-white text-2xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a class="text-white text-2xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+    <!-- JAVA SCRIPT DROPDOWN -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  </nav>
+
+  <!-- NAVBARFIXA OK -->
+  <div class="w-full">
+    <!-- NAVBARFIXA DESKTOP -->
+    <nav class=" fixed bottom-0 z-50 justify-between items-center w-full hidden lg:flex lg:flex-col">
+      <div class="flex items-center justify-end w-full">
+        <div class="relative flex items-center justify-center">
+          <img src="/public/img-footer.png" alt="" />
+          <div class="absolute flex items-center justify-stretch w-full max-w-4xl bottom-2 gap-4">
+
+            <div class="flex items-center justify-stretch gap-2">
+              <!-- BUTTON AGENDAR VISITA -->
+              <button onclick="openModal('modal1')"
+                class="flex justify-center text-base items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-48 h-16 px-4">
+                Agendar Visita
+              </button>
+              <!-- MODAL1 -->
+              <div id="modal1"
+                class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-28 mx-auto shadow-xl rounded-md bg-white max-w-lg w-full">
+                  <!-- Modal header -->
+                  <div class="flex justify-between items-center text-red-700 px-4 pt-5">
+                    <h3>Agendar visita</h3>
+                    <button onclick="closeModal('modal1')">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="flex flex-col justify-center items-center py-5">
+                    <p class="w-full items-start justify-start px-4 py-2">Escolha o dia:</p>
+                    <div class="flex flex-col py-5 items-center justify-between bg-gray-300 w-full">
+                      <p class="font-semibold w-full items-center justify-center flex px-4">
+                        Outubro
+                      </p>
+                      <div class="flex items-center justify-center gap-4 py-2">
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Qui.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            05</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Sex.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            06</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Sáb.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            07</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Dom.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            08</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Seg.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            09</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Ter.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            10</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center gap-2">
+                          <p class="font-semibold">Qua.</p>
+                          <p
+                            class="font-semibold h-14 w-14 border bg-white shadow-md rounded-md items-center justify-center flex text-xl">
+                            11</p>
+                        </div>
+                      </div>
+                      <div class="flex w-full items-center justify-between px-10 py-3">
+                        <button>
+                          <a href="">
+                            <i class="fa-solid fa-chevron-left text-2xl"></i>
+                          </a>
+                        </button>
+                        <button>
+                          <a href="">
+                            <i class="fa-solid fa-angle-right text-2xl"></i>
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="flex flex-col pt-2 items-center justify-between w-full">
+                      <p class="w-full items-center justify-start flex px-4">
+                        Escolha o período:
+                      </p>
+                      <div class="flex items-center justify-between gap-4 py-2 w-full px-4">
+                        <div class="md:flex items-center gap-2 py-2">
+                          <input id="link-checkbox" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                            <p class="font-semibold">Manhã <span class=" font-normal">08:00 -
+                                12:00</span></p>
+                          </label>
+                        </div>
+                        <div class="md:flex items-center gap-2 py-2">
+                          <input id="link-checkbox" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                            <p class="font-semibold">Tarde <span class=" font-normal">13:00 -
+                                19:00</span></p>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center w-full">
+                      <p class="w-full items-center justify-start flex px-4">
+                        Dados para contato:
+                      </p>
+                      <div class="flex items-center justify-between w-full px-4">
+                        <form class=" flex flex-col justify-center w-full">
+                          <div class="flex flex-col">
+                            <input type="name" name="name" id="name" placeholder="Nome"
+                              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+
+                          <div class="flex flex-col mt-2">
+                            <input type="email" name="email" id="email" placeholder="E-mail"
+                              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+
+                          <div class="flex flex-col mt-2">
+                            <input type="tel" name="tel" id="tel" placeholder="Celular"
+                              class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+
+                          <div class="flex lg:items-end items-center lg:justify-center justify-center">
+                            <button type="submit"
+                              class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                              Enviar
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- JAVA SCRIPT MODAL -->
+              <script type="text/javascript">
+                window.openModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'block'
+                  document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                }
+
+                window.closeModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'none'
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                }
+
+                // Close all modals when press ESC
+                document.onkeydown = function (event) {
+                  event = event || window.event;
+                  if (event.keyCode === 27) {
+                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                    let modals = document.getElementsByClassName('modal1');
+                    Array.prototype.slice.call(modals).forEach(i => {
+                      i.style.display = 'none'
+                    })
+                  }
+                };
+              </script>
+              <!-- FIM BUTTON AGENDAR VISITA -->
+
+              <!-- BUTTON MAIS INFORMAÇÕES -->
+              <button onclick="openModal('modal2')"
+                class="flex justify-center text-base items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-48 h-16 px-4">
+                Mais informações
+              </button>
+              <!-- MODAL2 -->
+              <div id="modal2"
+                class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-28 mx-auto shadow-xl rounded-md bg-white max-w-lg w-full">
+                  <!-- Modal header -->
+                  <div class="flex justify-between items-center text-red-700 px-4 py-5">
+                    <h3>Entre em contato</h3>
+                    <button onclick="closeModal('modal2')">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="flex flex-col justify-center items-center pb-10">
+                    <div class="flex items-center justify-between w-full px-4">
+                      <form class=" flex flex-col justify-center w-full">
+                        <div class="flex flex-col">
+                          <input type="name" name="name" id="name" placeholder="Nome"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <input type="email" name="email" id="email" placeholder="E-mail"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <input type="tel" name="tel" id="tel" placeholder="Celular"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <textarea rows="5"
+                            placeholder="Gostaria de mais informações sobre o imóvel com código 105360 - Casa de 340 m²  no valor de  R$  2,000,000.00  em  Vila Romana São Paulo."
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
+                        </div>
+
+                        <div class="md:flex items-center gap-2 py-2">
+                          <input id="link-checkbox" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                            <p class="">Por favor, contate-me pelo WhatsApp.</p>
+                          </label>
+                        </div>
+
+                        <div class="flex lg:items-end items-center lg:justify-center justify-center">
+                          <button type="submit"
+                            class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                            Enviar
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- JAVA SCRIPT MODAL -->
+              <script type="text/javascript">
+                window.openModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'block'
+                  document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                }
+
+                window.closeModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'none'
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                }
+
+                // Close all modals when press ESC
+                document.onkeydown = function (event) {
+                  event = event || window.event;
+                  if (event.keyCode === 27) {
+                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                    let modals = document.getElementsByClassName('modal2');
+                    Array.prototype.slice.call(modals).forEach(i => {
+                      i.style.display = 'none'
+                    })
+                  }
+                };
+              </script>
+              <!-- FIM BUTTON MAIS INFORMAÇÕES -->
+
+              <!-- FIM BUTTON PROPOSTA DE COMPRA -->
+              <button onclick="openModal('modal3')"
+                class="flex justify-center text-base items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-48 h-16 px-4">
+                Proposta de Compra
+              </button>
+              <!-- MODAL3 -->
+              <div id="modal3"
+                class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+                <div class="relative top-28 mx-auto shadow-xl rounded-md bg-white max-w-2xl w-full">
+                  <!-- Modal header -->
+                  <div class="flex justify-between items-center text-red-700 px-4 pt-5">
+                    <h3>Proposta de Compra</h3>
+                    <button onclick="closeModal('modal3')">
+                      <i class="fa-solid fa-xmark"></i>
+                    </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="flex flex-col justify-center items-center py-5">
+                    <div class="flex flex-col py-5 items-center justify-between bg-gray-300 w-full">
+
+                      <div class="flex items-center justify-between w-full px-4 gap-1 py-2">
+                        <p class="text-red-700">Imóvel Pretendido:</p>
+                        <p class="">Cód.: 9087635</p>
+                        <p class="">Apartamento</p>
+                        <p class="">Valor: <span class="text-red-700 font-semibold">R$
+                            25.000.000,00</span></p>
+                      </div>
+                      <div class="flex items-center w-full justify-start px-4 gap-4 py-2">
+                        <p class="">Chácara Santo Antônio</p>
+                        <p class="">Alameda Ministro Rocha Azevedo, 1368</p>
+                      </div>
+                      <div class="md:flex items-center justify-start w-full    gap-2 py-3 px-4">
+                        <input id="link-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="">
+                          <p class="">Já estou sendo atendido por um corretor(a) Zimmermann.</p>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="flex items-center justify-between w-full px-4">
+                      <form class=" flex justify-center w-full gap-2 py-5">
+                        <div class="w-full h-full">
+                          <div class="flex flex-col gap-1">
+                            <p class=" w-full items-center justify-start flex text-red-700">
+                              Proposta:
+                            </p>
+                            <div class="flex flex-col gap-2">
+                              <input type="name" name="name" id="name" placeholder="Valor (R$)"
+                                class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            </div>
+                            <div class="flex flex-col ">
+                              <input type="email" name="email" id="email" placeholder="Valor por extenso"
+                                class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            </div>
+                          </div>
+                          <div class="flex flex-col gap-1 mt-3">
+                            <p class=" w-full items-center justify-start flex text-red-700">
+                              Condições de pagamento:
+                            </p>
+                            <div class="flex gap-2">
+                              <input type="name" name="name" id="name" placeholder="Sinal (R$)"
+                                class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                              <input type="email" name="email" id="email" placeholder="Saldo (R$)"
+                                class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+
+                            </div>
+                            <textarea rows="5" placeholder="Observações"
+                              class="w-full bg-white py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
+                          </div>
+
+                        </div>
+                        <div class="w-ful">
+
+                          <p class=" w-full items-center justify-start flex text-red-700">
+                            Dados do comprador:
+                          </p>
+                          <div class="flex flex-col gap-2">
+                            <input type="name" name="name" id="name" placeholder="Nome"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="E-mail"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="Celular"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="CPF"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="RG"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+                          <div class="md:flex items-start justify-start gap-2 py-3">
+                            <input id="link-checkbox" type="checkbox" value=""
+                              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                            <label for="default-checkbox" class="">
+                              <p class="text-xs">Autorizo a ZIMMERMANN IMÓVEIS – RZ ASSESSORIA
+                                DE IMÓVEIS LTDA, Creci 15.319-J, a apresentar ao
+                                proprietário(a) do imóvel pretendo nesta proposta.</p>
+                            </label>
+                          </div>
+                          <div class="flex lg:items-end items-center lg:justify-end justify-center">
+                            <button type="submit"
+                              class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                              Enviar
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- JAVA SCRIPT MODAL -->
+              <script type="text/javascript">
+                window.openModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'block'
+                  document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+                }
+
+                window.closeModal = function (modalId) {
+                  document.getElementById(modalId).style.display = 'none'
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                }
+
+                // Close all modals when press ESC
+                document.onkeydown = function (event) {
+                  event = event || window.event;
+                  if (event.keyCode === 27) {
+                    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                    let modals = document.getElementsByClassName('modal3');
+                    Array.prototype.slice.call(modals).forEach(i => {
+                      i.style.display = 'none'
+                    })
+                  }
+                };
+              </script>
+              <!-- FIM BUTTON PROPOSTA DE COMPRA -->
+            </div>
+
+            <div class="flex items-center justify-around w-full">
+              <button>
+                <a href="#!" class="text-4xl">
+                  <img src="/public/icon-compartilhar.svg" alt="">
+                </a>
+              </button>
+              <button>
+                <a href="#!" class="text-4xl">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </button>
+              <button>
+                <a href="#!" class="text-4xl">
+                  <i class="fa-regular fa-heart"></i>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full bg-red-700 ">
+        <div class="lg:w-2/5 flex items-center justify-end mt-1">
+          <a href="index.html">
+            <img class="cursor-pointer" src="/public/logo-footer.png" width="100%" height="100%" alt="...">
+          </a>
+        </div>
+        <div class="w-full bg-red-700 lg:flex items-center justify-between px-5">
+          <ul class="flex w-full items-center justify-between max-w-5xl">
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Perdizes
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span>
+                </p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Pinheiros
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99939-9934</span>
+                </p>
+              </a>
+            </li>
+            <li class="ml-3 font-bold">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Jardins
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span>
+                </p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Vila Romana
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span>
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVBARFIXA MOBILE -->
+    <nav class="flex flex-col fixed bottom-0 z-50 justify-center items-center w-full lg:hidden">
+
+      <div class="flex items-center justify-end w-full">
+        <div class="relative flex items-center justify-center">
+          <img src="/public/img-footerMobile.png" alt="" />
+          <div class="absolute flex items-center justify-end gap-2 w-full max-w-xs px-3 bottom-2 mr-1">
+
+            <!-- BUTTON AGENDAR VISITA -->
+            <button onclick="openModal('modal4')"
+              class="flex justify-center text-xs items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-20 h-10 px-2">
+              Agendar Visita
+            </button>
+            <!-- MODAL4 -->
+            <div id="modal4"
+              class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+              <div class="relative top-10 mx-auto shadow-xl rounded-md bg-white max-w-md w-full">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center text-red-700 px-4 pt-5">
+                  <h3>Agendar visita</h3>
+                  <button onclick="closeModal('modal4')">
+                    <i class="fa-solid fa-xmark">x</i>
+                  </button>
+                </div>
+                <!-- Modal body -->
+                <div class="flex flex-col justify-center items-center py-5">
+                  <p class="w-full items-start justify-start px-4 py-2">Escolha o dia:</p>
+                  <div class="flex flex-col py-5 items-center justify-between bg-gray-300 w-full">
+                    <p class="font-semibold w-full items-center justify-center flex px-4">
+                      Outubro
+                    </p>
+                    <div class="flex w-full max-w-md items-center justify-center gap-0.5 py-2">
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Qui.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          05</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Sex.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          06</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Sáb.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          07</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Dom.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          08</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Seg.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          09</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Ter.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          10</p>
+                      </div>
+                      <div class="flex flex-col items-center justify-center gap-2">
+                        <p class="font-medium">Qua.</p>
+                        <p
+                          class="font-medium h-12 w-12 border bg-white shadow-md rounded-md items-center justify-center flex">
+                          11</p>
+                      </div>
+                    </div>
+                    <div class="flex w-full items-center justify-between px-6 py-3">
+                      <button>
+                        <a href="">
+                          <i class="fa-solid fa-chevron-left text-2xl"></i>
+                        </a>
+                      </button>
+                      <button>
+                        <a href="">
+                          <i class="fa-solid fa-angle-right text-2xl"></i>
+                        </a>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flex flex-col pt-2 items-center justify-between w-full">
+                    <p class="w-full items-center justify-start flex px-4">
+                      Escolha o período:
+                    </p>
+                    <div class="flex items-center justify-between gap-4 py-2 w-full px-4">
+                      <div class="flex items-center gap-2 py-2">
+                        <input id="link-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                          <p class="font-semibold">Manhã <span class=" font-normal">08:00 -
+                              12:00</span></p>
+                        </label>
+                      </div>
+                      <div class="flex items-center gap-2 py-2">
+                        <input id="link-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                          <p class="font-semibold">Tarde <span class=" font-normal">13:00 -
+                              19:00</span></p>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-center justify-center w-full">
+                    <p class="w-full items-center justify-start flex px-4">
+                      Dados para contato:
+                    </p>
+                    <div class="flex items-center justify-between w-full px-4">
+                      <form class=" flex flex-col justify-center w-full">
+                        <div class="flex flex-col">
+                          <input type="name" name="name" id="name" placeholder="Nome"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <input type="email" name="email" id="email" placeholder="E-mail"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex flex-col mt-2">
+                          <input type="tel" name="tel" id="tel" placeholder="Celular"
+                            class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+
+                        <div class="flex lg:items-end items-center lg:justify-center justify-center">
+                          <button type="submit"
+                            class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                            Enviar
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- JAVA SCRIPT MODAL -->
+            <script type="text/javascript">
+              window.openModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'block'
+                document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+              }
+
+              window.closeModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'none'
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+              }
+
+              // Close all modals when press ESC
+              document.onkeydown = function (event) {
+                event = event || window.event;
+                if (event.keyCode === 27) {
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                  let modals = document.getElementsByClassName('modal4');
+                  Array.prototype.slice.call(modals).forEach(i => {
+                    i.style.display = 'none'
+                  })
+                }
+              };
+            </script>
+            <!-- FIM BUTTON AGENDAR VISITA -->
+
+            <!-- BUTTON MAIS INFORMAÇÕES -->
+            <button onclick="openModal('modal5')"
+              class="flex justify-center text-xs items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-20 h-10 px-2">
+              Mais informações
+            </button>
+            <!-- MODAL5 -->
+            <div id="modal5"
+              class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+              <div class="relative top-10 mx-auto shadow-xl rounded-md bg-white max-w-md w-full">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center text-red-700 px-4 py-5">
+                  <h3>Entre em contato</h3>
+                  <button onclick="closeModal('modal5')">
+                    <i class="fa-solid fa-xmark">x</i>
+                  </button>
+                </div>
+                <!-- Modal body -->
+                <div class="flex flex-col justify-center items-center pb-10">
+                  <div class="flex items-center justify-between w-full px-4">
+                    <form class=" flex flex-col justify-center w-full">
+                      <div class="flex flex-col">
+                        <input type="name" name="name" id="name" placeholder="Nome"
+                          class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                      </div>
+
+                      <div class="flex flex-col mt-2">
+                        <input type="email" name="email" id="email" placeholder="E-mail"
+                          class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                      </div>
+
+                      <div class="flex flex-col mt-2">
+                        <input type="tel" name="tel" id="tel" placeholder="Celular"
+                          class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                      </div>
+
+                      <div class="flex flex-col mt-2">
+                        <textarea rows="5"
+                          placeholder="Gostaria de mais informações sobre o imóvel com código 105360 - Casa de 340 m²  no valor de  R$  2,000,000.00  em  Vila Romana São Paulo."
+                          class="w-full bg-white mt-2 py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
+                      </div>
+
+                      <div class="md:flex items-center gap-2 py-2 max-w-sm">
+                        <input id="link-checkbox" type="checkbox" value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="default-checkbox" class="ms-2 text-base font-medium text-gray-500">
+                          <p class="">Por favor, contate-me pelo WhatsApp.</p>
+                        </label>
+                      </div>
+
+                      <div class="flex lg:items-end items-center lg:justify-center justify-center">
+                        <button type="submit"
+                          class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                          Enviar
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- JAVA SCRIPT MODAL -->
+            <script type="text/javascript">
+              window.openModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'block'
+                document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+              }
+
+              window.closeModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'none'
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+              }
+
+              // Close all modals when press ESC
+              document.onkeydown = function (event) {
+                event = event || window.event;
+                if (event.keyCode === 27) {
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                  let modals = document.getElementsByClassName('modal5');
+                  Array.prototype.slice.call(modals).forEach(i => {
+                    i.style.display = 'none'
+                  })
+                }
+              };
+            </script>
+            <!-- FIM BUTTON MAIS INFORMAÇÕES -->
+
+            <!-- BUTTON PROPOSTA -->
+            <button onclick="openModal('modal6')"
+              class="flex justify-center text-xs items-center border bg-white shadow-sm shadow-red-700 text-red-700 border-red-700 rounded-md w-20 h-10 px-2">
+              Proposta de Compra
+            </button>
+            <!-- MODAL6 -->
+            <div id="modal6"
+              class="fixed hidden z-50 inset-0 bg-black bg-opacity-90 overflow-y-auto h-full w-full px-4 modal">
+              <div class="relative top-10 mx-auto shadow-xl rounded-md bg-white max-w-md w-full">
+                <!-- Modal header -->
+                <div class="flex justify-between items-center text-red-700 px-4 pt-5">
+                  <h3>Proposta de Compra</h3>
+                  <button onclick="closeModal('modal6')">
+                    <i class="fa-solid fa-xmark">x</i>
+                  </button>
+                </div>
+                <!-- Modal body -->
+                <div class="flex flex-col justify-center items-center py-5">
+                  <div class="flex flex-col py-5 items-center justify-between bg-gray-300 w-full">
+                    <div class="flex items-center justify-between w-full px-4 gap-1 py-2">
+                      <p class="text-red-700">Imóvel Pretendido:</p>
+                      <p class="">Cód.: 9087635</p>
+
+                    </div>
+                    <div class="flex items-center justify-between w-full px-4 gap-1 py-2">
+                      <p class="">Apartamento</p>
+                      <p class="">Valor: <span class="text-red-700 font-semibold">R$
+                          25.000.000,00</span></p>
+                    </div>
+                    <div class="flex flex-col items-start w-full justify-start px-4 gap-4 py-2">
+                      <p class="">Chácara Santo Antônio</p>
+                      <p class="">Alameda Ministro Rocha Azevedo, 1368</p>
+                    </div>
+                    <div class="flex items-start justify-start w-full max-w-sm gap-2 py-3 px-4">
+                      <input id="link-checkbox" type="checkbox" value=""
+                        class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                      <label for="default-checkbox" class="">
+                        <p class="">Já estou sendo atendido por um corretor(a) Zimmermann.</p>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between w-full px-4">
+                    <form class="flex flex-col justify-center w-full gap-2 py-5">
+                      <div class="w-full">
+                        <div class="flex flex-col gap-1">
+                          <p class=" w-full items-center justify-start flex text-red-700">
+                            Proposta:
+                          </p>
+                          <div class="flex flex-col gap-2">
+                            <input type="name" name="name" id="name" placeholder="Valor (R$)"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+                          <div class="flex flex-col ">
+                            <input type="email" name="email" id="email" placeholder="Valor por extenso"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          </div>
+                        </div>
+                        <div class="flex flex-col gap-1 mt-3">
+                          <p class=" w-full items-center justify-start flex text-red-700">
+                            Condições de pagamento:
+                          </p>
+                          <div class="flex gap-2">
+                            <input type="name" name="name" id="name" placeholder="Sinal (R$)"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                            <input type="email" name="email" id="email" placeholder="Saldo (R$)"
+                              class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+
+                          </div>
+                          <textarea rows="5" placeholder="Observações"
+                            class="w-full bg-white py-3 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md"></textarea>
+                        </div>
+
+                      </div>
+                      <div class="w-ful">
+
+                        <p class=" w-full items-center justify-start flex text-red-700">
+                          Dados do comprador:
+                        </p>
+                        <div class="flex flex-col gap-2">
+                          <input type="name" name="name" id="name" placeholder="Nome"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          <input type="email" name="email" id="email" placeholder="E-mail"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          <input type="email" name="email" id="email" placeholder="Celular"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          <input type="email" name="email" id="email" placeholder="CPF"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                          <input type="email" name="email" id="email" placeholder="RG"
+                            class="w-full bg-white py-2 px-3 rounded-lg border border-gray-400 text-gray-800 drop-shadow-md">
+                        </div>
+                        <div class="flex max-w-xs items-start justify-start gap-2 py-3">
+                          <input id="link-checkbox" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                          <label for="default-checkbox" class="">
+                            <p class="text-xs">Autorizo a ZIMMERMANN IMÓVEIS – RZ ASSESSORIA
+                              DE IMÓVEIS LTDA, Creci 15.319-J, a apresentar ao
+                              proprietário(a) do imóvel pretendo nesta proposta.</p>
+                          </label>
+                        </div>
+                        <div class="flex lg:items-end items-center lg:justify-end justify-center">
+                          <button type="submit"
+                            class="w-32 bg-red-700 hover:bg-blue-dark text-white py-1.5 px-3 rounded-full mt-3 hover:bg-red-800 transition ease-in-out duration-300">
+                            Enviar
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- JAVA SCRIPT MODAL -->
+            <script type="text/javascript">
+              window.openModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'block'
+                document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+              }
+
+              window.closeModal = function (modalId) {
+                document.getElementById(modalId).style.display = 'none'
+                document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+              }
+
+              // Close all modals when press ESC
+              document.onkeydown = function (event) {
+                event = event || window.event;
+                if (event.keyCode === 27) {
+                  document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+                  let modals = document.getElementsByClassName('modal6');
+                  Array.prototype.slice.call(modals).forEach(i => {
+                    i.style.display = 'none'
+                  })
+                }
+              };
+            </script>
+            <!-- FIM BUTTON PROPOSTA -->
+
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full bg-green-500 flex">
+        <div class="w-full justify-between h-full flex items-center">
+          <a href="index.html">
+            <img class="cursor-pointer" src="/public/logo-barra-mobile.png" alt="...">
+          </a>
+        </div>
+        <div class="w-1/2 flex items-center justify-center">
+          <i class="fa-brands fa-whatsapp text-white text-5xl"></i>
+        </div>
+      </div>
+    </nav>
+  </div>
+
   <!-- IMOVEIS SELECIONADOS -->
-  <section class="flex w-full justify-center items-center lg:py-20 pt-20 pb-0 px-5">
+  <section class="flex w-full justify-center items-center py-5 lg:pb-16 px-0 md:px-4 lg:px-0">
     <div class='lg:justify-center items-center grid lg:max-w-6xl'>
       <div class="items-center justify-center lg:flex lg:flex-col grid gap-5">
-        <div class="lg:flex grid items-center w-full justify-between gap-6">
-          <h3 class="lg:text-xl font-semibold text-xl text-red-700 text-center uppercase">
-            Imóveis Selecionados por você
-          </h3>
-          <h3 class="lg:text-xl text-xl text-end">
-            Limpar selecionados
+        <div class="md:flex grid items-center w-full justify-between gap-6">
+          <div>
+            <h3 class="lg:text-xl text-xl text-red-700 text-center uppercase md:flex hidden">
+              Imóveis Selecionados por você
+            </h3>
+            <div class="relative flex md:hidden items-center justify-center">
+              <img src="/public/bannerBuscaFavoritosMobile.png" class="h-full w-full" alt="" />
+              <div class="absolute flex w-full px-8">
+                <h1 class="lg:text-xl text-center text-lg flex text-white uppercase">
+                  Imóveis Selecionados por você
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="lg:text-xl text-xl text-end px-4 lg:px-0">
+              <a href="" class="underline">
+                Limpar selecionados
+              </a>
+          </div>
           </h3>
         </div>
 
@@ -31,650 +1176,652 @@
 
           <!-- IMOVEL 1 -->
           <div class="group relative rounded-xl bg-white border">
+            <a href="imovelDetalhes.html">
 
-            <!-- SOMBRA HOVER -->
-            <div
-              class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
-            </div>
+              <!-- SOMBRA HOVER -->
+              <span
+                class="absolute left-0 z-20 block w-full h-0 transition-all bg-black opacity-20 group-hover:h-full top-1/2 group-hover:rounded-lg group-hover:top-0 duration-700 ease"></span>
 
-            <div class="relative group">
+              <div class="relative group">
 
-              <!-- FOTO IMÓVEL -->
-              <div class="group relative">
-                <div class="z-10 h-full w-full ">
-                  <img src="/public/ft1.svg" class="flex h-full w-full object-cover relative object-center" alt="" />
-                </div>
-                <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
-                  <div class="flex items-center justify-center">
-                    <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
-                    <p href="#!" class="text-white">Com vídeo</p>
+                <!-- FOTO IMÓVEL -->
+                <div class="group relative">
+                  <div class="z-10 h-full w-full ">
+                    <img src="/public/ft1.png" class="flex h-full w-full object-cover relative object-center" alt="" />
                   </div>
-                  <div>
-                    <p href="#!" class="text-white">Cód.: 987653</p>
+                  <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                    <div class="flex items-center justify-center">
+                      <i class="fa-solid fa-video mr-1 text-white"></i>
+                      <p class="text-white">Com vídeo</p>
+                    </div>
+                    <div>
+                      <p class="text-white">Cód.: 987653</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 pt-5 pb-8">
+
+                  <div class="pb-6 flex items-center w-full justify-between">
+                    <div class="w-full">
+                      <a href="#!" class="">
+                        Alto de Pinheiros
+                      </a>
+                    </div>
+                    <div class="flex gap-5 items-center justify-end w-full">
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <img src="/public/icon-compartilhar.svg" alt="">
+                      </a>
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <i class="fa-solid fa-heart text-2xl text-red-700"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="pb-6 flex items-center justify-between">
+                    <p href="#!" class="text-red-700">
+                      Cobertura
+                    </p>
+                    <p href="#!" class="font-medium text-red-700">
+                      R$ 25.000.000,00
+                    </p>
+                  </div>
+
+                  <div class="pb-6 flex items-center">
+                    <p href="#!" class="">
+                      Alameda Ministro Rocha Azevedo, 1368
+                    </p>
+                  </div>
+
+                  <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                    <div class="flex items-center justify-start">
+                      <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                    </div>
+                    <div class="flex items-center justify-center ">
+                      <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                      <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                      <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                    </div>
+                  </div>
+
+                  <div class="pt-6 flex items-center lg:gap-3 gap-1 w-full">
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icon-metro.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Metrô
+                      </p>
+                      <i class="fa-solid fa-circle ml-1 text-yellow-500 text-xs"></i>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-star mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Destaque
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-36 py-0.5">
+                      <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Compre já alugado
+                      </p>
+                    </button>
                   </div>
                 </div>
               </div>
-
-              <div class="p-6">
-
-                <div class="pb-6 flex items-center justify-between">
-                  <div>
-                    <a href="#!" class="">
-                      Alto de Pinheiros
-                    </a>
-                  </div>
-                  <div class="flex gap-5">
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-compartilhar.svg" alt="">
-                    </a>
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-coracao-selecionado.svg" alt="">
-                    </a>
-                  </div>
-                </div>
-
-                <div class="pb-6 flex items-center justify-between">
-                  <p href="#!" class="text-red-700">
-                    Cobertura
-                  </p>
-                  <p href="#!" class="font-medium text-red-700">
-                    R$ 25.000.000,00
-                  </p>
-                </div>
-
-                <div class="pb-6 flex items-center">
-                  <p href="#!" class="">
-                    Alameda Ministro Rocha Azevedo, 1368
-                  </p>
-                </div>
-
-                <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
-                  <div class="flex items-center justify-start">
-                    <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
-                  </div>
-                  <div class="flex items-center justify-center ">
-                    <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
-                  </div>
-                  <div class="flex items-center justify-center">
-                    <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
-                  </div>
-                  <div class="flex items-center justify-end">
-                    <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
-                  </div>
-                </div>
-
-                <div class="pt-6 flex items-center lg:gap-3 gap-1">
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-metro.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Metrô
-                    </p>
-                    <img src="/public/icon-metro-amarela.svg" class="ml-1" alt="">
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Destaque
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
-                    <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Compre já alugado
-                    </p>
-                  </button>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
 
           <!-- IMOVEL 2 -->
           <div class="group relative rounded-xl bg-white border">
-            <!-- SOMBRA HOVER -->
-            <div
-              class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
-            </div>
-            <div class="relative group">
+            <a href="imovelDetalhes.html">
 
-              <!-- FOTO IMÓVEL -->
-              <div class="group relative">
-                <div class="z-10 h-full w-full ">
-                  <img src="/public/ft3.svg" class="flex h-full w-full object-cover relative object-center" alt="" />
+              <!-- SOMBRA HOVER -->
+              <span
+                class="absolute left-0 z-20 block w-full h-0 transition-all bg-black opacity-20 group-hover:h-full top-1/2 group-hover:rounded-lg group-hover:top-0 duration-700 ease"></span>
+
+              <div class="relative group">
+
+                <!-- FOTO IMÓVEL -->
+                <div class="group relative">
+                  <div class="z-10 h-full w-full ">
+                    <img src="/public/ft3.png" class="flex h-full w-full object-cover relative object-center" alt="" />
+                  </div>
+                  <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                    <div class="flex items-center justify-center">
+                      <i class="fa-solid fa-video mr-1 text-white"></i>
+                      <p class="text-white">Com vídeo</p>
+                    </div>
+                    <div>
+                      <p class="text-white">Cód.: 987653</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
-                  <div class="flex items-center justify-center">
-                    <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
-                    <p href="#!" class="text-white">
-                      Com vídeo
+
+                <div class="px-3 pt-5 pb-8">
+
+                  <div class="pb-6 flex items-center w-full justify-between">
+                    <div class="w-full">
+                      <a href="#!" class="">
+                        Perdizes
+                      </a>
+                    </div>
+                    <div class="flex gap-5 items-center justify-end w-full">
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <img src="/public/icon-compartilhar.svg" alt="">
+                      </a>
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <i class="fa-solid fa-heart text-2xl text-red-700"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="pb-6 flex items-center justify-between">
+                    <p href="#!" class="text-red-700">
+                      Casa em condomínio
+                    </p>
+                    <p href="#!" class="font-medium text-red-700">
+                      R$ 25.000.000,00
                     </p>
                   </div>
-                  <div>
-                    <p href="#!" class="text-white">
-                      Cód.: 987653
+
+                  <div class="pb-6 flex items-center">
+                    <p href="#!" class="">
+                      Rua Rocha Azevedo, 168
                     </p>
+                  </div>
+
+                  <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                    <div class="flex items-center justify-start">
+                      <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                    </div>
+                    <div class="flex items-center justify-center ">
+                      <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                      <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                      <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                    </div>
+                  </div>
+
+                  <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icone-permuta.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Permuta
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-star mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Destaque
+                      </p>
+                    </button>
                   </div>
                 </div>
               </div>
-
-              <div class="p-6">
-
-                <div class="pb-6 flex items-center justify-between">
-                  <div>
-                    <a href="#!" class="">
-                      Perdizes
-                    </a>
-                  </div>
-                  <div class="flex gap-5">
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-compartilhar.svg" alt="">
-                    </a>
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-coracao-selecionado.svg" alt="">
-                    </a>
-                  </div>
-                </div>
-
-                <div class="pb-6 flex items-center justify-between">
-                  <p href="#!" class="text-red-700">
-                    Casa em condomínio
-                  </p>
-                  <p href="#!" class="font-medium text-red-700">
-                    R$ 25.000.000,00
-                  </p>
-                </div>
-
-                <div class="pb-6 flex items-center">
-                  <p href="#!" class="">
-                    Rua Rocha Azevedo, 168
-                  </p>
-                </div>
-
-                <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
-                  <div class="flex items-center justify-start">
-                    <p>135<span class="text-gray-500 font-medium"> m2</span></p>
-                  </div>
-                  <div class="flex items-center justify-center ">
-                    <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
-                  </div>
-                  <div class="flex items-center justify-center">
-                    <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
-                  </div>
-                  <div class="flex items-center justify-end">
-                    <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
-                  </div>
-                </div>
-
-                <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icone-permuta.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Permuta
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Destaque
-                    </p>
-                  </button>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
 
           <!-- IMOVEL 3 -->
           <div class="group relative rounded-xl bg-white border">
-            <!-- SOMBRA HOVER -->
-            <div
-              class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
-            </div>
-            <div class="relative group">
-              <!-- FOTO IMÓVEL -->
-              <div class="group relative">
-                <div class="z-10 h-full w-full ">
-                  <img src="/public/ft2.svg" class="flex h-full w-full object-cover relative object-center" alt="" />
+            <a href="imovelDetalhes.html">
+
+              <!-- SOMBRA HOVER -->
+              <span
+                class="absolute left-0 z-20 block w-full h-0 transition-all bg-black opacity-20 group-hover:h-full top-1/2 group-hover:rounded-lg group-hover:top-0 duration-700 ease"></span>
+
+              <div class="relative group">
+
+                <!-- FOTO IMÓVEL -->
+                <div class="group relative">
+                  <div class="z-10 h-full w-full ">
+                    <img src="/public/ft2.png" class="flex h-full w-full object-cover relative object-center" alt="" />
+                  </div>
+                  <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                    <div class="flex items-center justify-center">
+                      <i class="fa-solid fa-video mr-1 text-white"></i>
+                      <p class="text-white">Com vídeo</p>
+                    </div>
+                    <div>
+                      <p class="text-white">Cód.: 987653</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
-                  <div class="flex items-center justify-center">
-                    <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
-                    <p href="#!" class="text-white">
-                      Com vídeo
+
+                <div class="px-3 pt-5 pb-8">
+
+                  <div class="pb-6 flex items-center w-full justify-between">
+                    <div class="w-full">
+                      <a href="#!" class="">
+                        Chácara Santo Antônio
+                      </a>
+                    </div>
+                    <div class="flex gap-5 items-center justify-end w-full">
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <img src="/public/icon-compartilhar.svg" alt="">
+                      </a>
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <i class="fa-solid fa-heart text-2xl text-red-700"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="pb-6 flex items-center justify-between">
+                    <p href="#!" class="text-red-700">
+                      Apartamento
+                    </p>
+                    <p href="#!" class="font-medium text-red-700">
+                      R$ 25.000.000,00
                     </p>
                   </div>
-                  <div>
-                    <p href="#!" class="text-white">
-                      Cód.: 987653
+
+                  <div class="pb-6 flex items-center">
+                    <p href="#!" class="">
+                      Alameda Ministro Rocha Azevedo, 1368
                     </p>
+                  </div>
+
+                  <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                    <div class="flex items-center justify-start">
+                      <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                    </div>
+                    <div class="flex items-center justify-center ">
+                      <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                      <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                      <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                    </div>
+                  </div>
+
+                  <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icon-metro.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Metrô
+                      </p>
+                      <i class="fa-solid fa-circle ml-1 text-yellow-500 text-xs"></i>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icone-permuta.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Permuta
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-star mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Destaque
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-percent mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Imperdível
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
+                      <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Compre já alugado
+                      </p>
+                    </button>
                   </div>
                 </div>
               </div>
-
-              <div class="p-6">
-
-                <div class="pb-6 flex items-center justify-between">
-                  <div>
-                    <a href="#!" class="">
-                      Chácara Santo Antônio
-                    </a>
-                  </div>
-                  <div class="flex gap-5">
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-compartilhar.svg" alt="">
-                    </a>
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-coracao-selecionado.svg" alt="">
-                    </a>
-                  </div>
-                </div>
-
-                <div class="pb-6 flex items-center justify-between">
-                  <p href="#!" class="text-red-700">
-                    Apartamento
-                  </p>
-                  <p href="#!" class="font-medium text-red-700">
-                    R$ 25.000.000,00
-                  </p>
-                </div>
-
-                <div class="pb-6 flex items-center">
-                  <p href="#!" class="">
-                    Alameda Ministro Rocha Azevedo, 1368
-                  </p>
-                </div>
-
-                <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
-                  <div class="flex items-center justify-start">
-                    <p>135<span class="text-gray-500 font-medium"> m2</span></p>
-                  </div>
-                  <div class="flex items-center justify-center ">
-                    <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
-                  </div>
-                  <div class="flex items-center justify-center">
-                    <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
-                  </div>
-                  <div class="flex items-center justify-end">
-                    <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
-                  </div>
-                </div>
-
-                <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-metro.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Metrô
-                    </p>
-                    <img src="/public/icone-metro-lilas.svg" class="ml-1" alt="">
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icone-permuta.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Permuta
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Destaque
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icone-imperdivel.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Imperdível
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-40 py-0.5">
-                    <img src="/public/icon-locacao.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Compre já alugado
-                    </p>
-                  </button>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
 
           <!-- IMOVEL 4 -->
           <div class="group relative rounded-xl bg-white border">
+            <a href="imovelDetalhes.html">
 
-            <!-- SOMBRA HOVER -->
-            <div
-              class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
-            </div>
+              <!-- SOMBRA HOVER -->
+              <span
+                class="absolute left-0 z-20 block w-full h-0 transition-all bg-black opacity-20 group-hover:h-full top-1/2 group-hover:rounded-lg group-hover:top-0 duration-700 ease"></span>
 
-            <div class="relative group">
+              <div class="relative group">
 
-              <!-- FOTO IMÓVEL -->
-              <div class="group relative">
-                <div class="z-10 h-full w-full ">
-                  <img src="/public/ft1.svg" class="flex h-full w-full object-cover relative object-center" alt="" />
-                </div>
-                <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
-                  <div class="flex items-center justify-center">
-                    <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
-                    <p href="#!" class="text-white">Com vídeo</p>
+                <!-- FOTO IMÓVEL -->
+                <div class="group relative">
+                  <div class="z-10 h-full w-full ">
+                    <img src="/public/ft1.png" class="flex h-full w-full object-cover relative object-center" alt="" />
                   </div>
-                  <div>
-                    <p href="#!" class="text-white">Cód.: 987653</p>
+                  <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                    <div class="flex items-center justify-center">
+                      <i class="fa-solid fa-video mr-1 text-white"></i>
+                      <p class="text-white">Com vídeo</p>
+                    </div>
+                    <div>
+                      <p class="text-white">Cód.: 987653</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="px-3 pt-5 pb-8">
+
+                  <div class="pb-6 flex items-center w-full justify-between">
+                    <div class="w-full">
+                      <a href="#!" class="">
+                        Alto de Pinheiros
+                      </a>
+                    </div>
+                    <div class="flex gap-5 items-center justify-end w-full">
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <img src="/public/icon-compartilhar.svg" alt="">
+                      </a>
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <i class="fa-solid fa-heart text-2xl text-red-700"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="pb-6 flex items-center justify-between">
+                    <p href="#!" class="text-red-700">
+                      Cobertura
+                    </p>
+                    <p href="#!" class="font-medium text-red-700">
+                      R$ 25.000.000,00
+                    </p>
+                  </div>
+
+                  <div class="pb-6 flex items-center">
+                    <p href="#!" class="">
+                      Alameda Ministro Rocha Azevedo, 1368
+                    </p>
+                  </div>
+
+                  <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                    <div class="flex items-center justify-start">
+                      <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                    </div>
+                    <div class="flex items-center justify-center ">
+                      <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                      <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                      <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                    </div>
+                  </div>
+
+                  <div class="pt-6 flex items-center lg:gap-3 gap-1">
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icon-metro.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Metrô
+                      </p>
+                      <i class="fa-solid fa-circle ml-1 text-yellow-500 text-xs"></i>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-star mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Destaque
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
+                      <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Compre já alugado
+                      </p>
+                    </button>
                   </div>
                 </div>
               </div>
-
-              <div class="p-6">
-
-                <div class="pb-6 flex items-center justify-between">
-                  <div>
-                    <a href="#!" class="">
-                      Alto de Pinheiros
-                    </a>
-                  </div>
-                  <div class="flex gap-5">
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-compartilhar.svg" alt="">
-                    </a>
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-coracao-selecionado.svg" alt="">
-                    </a>
-                  </div>
-                </div>
-
-                <div class="pb-6 flex items-center justify-between">
-                  <p href="#!" class="text-red-700">
-                    Cobertura
-                  </p>
-                  <p href="#!" class="font-medium text-red-700">
-                    R$ 25.000.000,00
-                  </p>
-                </div>
-
-                <div class="pb-6 flex items-center">
-                  <p href="#!" class="">
-                    Alameda Ministro Rocha Azevedo, 1368
-                  </p>
-                </div>
-
-                <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
-                  <div class="flex items-center justify-start">
-                    <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
-                  </div>
-                  <div class="flex items-center justify-center ">
-                    <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
-                  </div>
-                  <div class="flex items-center justify-center">
-                    <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
-                  </div>
-                  <div class="flex items-center justify-end">
-                    <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
-                  </div>
-                </div>
-
-                <div class="pt-6 flex items-center lg:gap-3 gap-1">
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-metro.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Metrô
-                    </p>
-                    <img src="/public/icon-metro-amarela.svg" class="ml-1" alt="">
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Destaque
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
-                    <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Compre já alugado
-                    </p>
-                  </button>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
 
           <!-- IMOVEL 5 -->
           <div class="group relative rounded-xl bg-white border">
-            <!-- SOMBRA HOVER -->
-            <div
-              class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
-            </div>
-            <div class="relative group">
+            <a href="imovelDetalhes.html">
 
-              <!-- FOTO IMÓVEL -->
-              <div class="group relative">
-                <div class="z-10 h-full w-full ">
-                  <img src="/public/ft3.svg" class="flex h-full w-full object-cover relative object-center" alt="" />
+              <!-- SOMBRA HOVER -->
+              <span
+                class="absolute left-0 z-20 block w-full h-0 transition-all bg-black opacity-20 group-hover:h-full top-1/2 group-hover:rounded-lg group-hover:top-0 duration-700 ease"></span>
+
+              <div class="relative group">
+
+                <!-- FOTO IMÓVEL -->
+                <div class="group relative">
+                  <div class="z-10 h-full w-full ">
+                    <img src="/public/ft3.png" class="flex h-full w-full object-cover relative object-center" alt="" />
+                  </div>
+                  <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                    <div class="flex items-center justify-center">
+                      <i class="fa-solid fa-video mr-1 text-white"></i>
+                      <p class="text-white">Com vídeo</p>
+                    </div>
+                    <div>
+                      <p class="text-white">Cód.: 987653</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
-                  <div class="flex items-center justify-center">
-                    <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
-                    <p href="#!" class="text-white">
-                      Com vídeo
+
+                <div class="px-3 pt-5 pb-8">
+
+                  <div class="pb-6 flex items-center w-full justify-between">
+                    <div class="w-full">
+                      <a href="#!" class="">
+                        Perdizes
+                      </a>
+                    </div>
+                    <div class="flex gap-5 items-center justify-end w-full">
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <img src="/public/icon-compartilhar.svg" alt="">
+                      </a>
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <i class="fa-solid fa-heart text-2xl text-red-700"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="pb-6 flex items-center justify-between">
+                    <p href="#!" class="text-red-700">
+                      Casa em condomínio
+                    </p>
+                    <p href="#!" class="font-medium text-red-700">
+                      R$ 25.000.000,00
                     </p>
                   </div>
-                  <div>
-                    <p href="#!" class="text-white">
-                      Cód.: 987653
+
+                  <div class="pb-6 flex items-center">
+                    <p href="#!" class="">
+                      Rua Rocha Azevedo, 168
                     </p>
+                  </div>
+
+                  <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                    <div class="flex items-center justify-start">
+                      <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                    </div>
+                    <div class="flex items-center justify-center ">
+                      <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                      <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                      <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                    </div>
+                  </div>
+
+                  <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icone-permuta.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Permuta
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-star mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Destaque
+                      </p>
+                    </button>
                   </div>
                 </div>
               </div>
-
-              <div class="p-6">
-
-                <div class="pb-6 flex items-center justify-between">
-                  <div>
-                    <a href="#!" class="">
-                      Perdizes
-                    </a>
-                  </div>
-                  <div class="flex gap-5">
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-compartilhar.svg" alt="">
-                    </a>
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-coracao-selecionado.svg" alt="">
-                    </a>
-                  </div>
-                </div>
-
-                <div class="pb-6 flex items-center justify-between">
-                  <p href="#!" class="text-red-700">
-                    Casa em condomínio
-                  </p>
-                  <p href="#!" class="font-medium text-red-700">
-                    R$ 25.000.000,00
-                  </p>
-                </div>
-
-                <div class="pb-6 flex items-center">
-                  <p href="#!" class="">
-                    Rua Rocha Azevedo, 168
-                  </p>
-                </div>
-
-                <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
-                  <div class="flex items-center justify-start">
-                    <p>135<span class="text-gray-500 font-medium"> m2</span></p>
-                  </div>
-                  <div class="flex items-center justify-center ">
-                    <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
-                  </div>
-                  <div class="flex items-center justify-center">
-                    <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
-                  </div>
-                  <div class="flex items-center justify-end">
-                    <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
-                  </div>
-                </div>
-
-                <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icone-permuta.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Permuta
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Destaque
-                    </p>
-                  </button>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
 
           <!-- IMOVEL 6 -->
           <div class="group relative rounded-xl bg-white border">
-            <!-- SOMBRA HOVER -->
-            <div
-              class="flex justify-center z-30 items-center group-hover:rounded-lg opacity-0 bg-red-700 group-hover:opacity-20 absolute top-0 h-full w-full">
-            </div>
-            <div class="relative group">
-              <!-- FOTO IMÓVEL -->
-              <div class="group relative">
-                <div class="z-10 h-full w-full ">
-                  <img src="/public/ft2.svg" class="flex h-full w-full object-cover relative object-center" alt="" />
+            <a href="imovelDetalhes.html">
+
+              <!-- SOMBRA HOVER -->
+              <span
+                class="absolute left-0 z-20 block w-full h-0 transition-all bg-black opacity-20 group-hover:h-full top-1/2 group-hover:rounded-lg group-hover:top-0 duration-700 ease"></span>
+
+              <div class="relative group">
+
+                <!-- FOTO IMÓVEL -->
+                <div class="group relative">
+                  <div class="z-10 h-full w-full ">
+                    <img src="/public/ft2.png" class="flex h-full w-full object-cover relative object-center" alt="" />
+                  </div>
+                  <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
+                    <div class="flex items-center justify-center">
+                      <i class="fa-solid fa-video mr-1 text-white"></i>
+                      <p class="text-white">Com vídeo</p>
+                    </div>
+                    <div>
+                      <p class="text-white">Cód.: 987653</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="absolute flex items-center justify-between w-full px-4 bottom-3 z-20 ">
-                  <div class="flex items-center justify-center">
-                    <img src="/public/icone-video.svg" alt="" class="mr-1 h-3">
-                    <p href="#!" class="text-white">
-                      Com vídeo
+
+                <div class="px-3 pt-5 pb-8">
+
+                  <div class="pb-6 flex items-center w-full justify-between">
+                    <div class="w-full">
+                      <a href="#!" class="">
+                        Chácara Santo Antônio
+                      </a>
+                    </div>
+                    <div class="flex gap-5 items-center justify-end w-full">
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <img src="/public/icon-compartilhar.svg" alt="">
+                      </a>
+                      <a href="#!" class="font-medium ease-in-out duration-500">
+                        <i class="fa-solid fa-heart text-2xl text-red-700"></i>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="pb-6 flex items-center justify-between">
+                    <p href="#!" class="text-red-700">
+                      Apartamento
+                    </p>
+                    <p href="#!" class="font-medium text-red-700">
+                      R$ 25.000.000,00
                     </p>
                   </div>
-                  <div>
-                    <p href="#!" class="text-white">
-                      Cód.: 987653
+
+                  <div class="pb-6 flex items-center">
+                    <p href="#!" class="">
+                      Alameda Ministro Rocha Azevedo, 1368
                     </p>
+                  </div>
+
+                  <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
+                    <div class="flex items-center justify-start">
+                      <p>1345<span class="text-gray-500 font-medium"> m2</span></p>
+                    </div>
+                    <div class="flex items-center justify-center ">
+                      <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                      <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
+                    </div>
+                    <div class="flex items-center justify-end">
+                      <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
+                    </div>
+                  </div>
+
+                  <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icon-metro.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Metrô
+                      </p>
+                      <i class="fa-solid fa-circle ml-1 text-yellow-500 text-xs"></i>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <img src="/public/icone-permuta.svg" class="mr-1" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Permuta
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-star mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Destaque
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
+                      <i class="fa-solid fa-percent mr-1 text-xs"></i>
+                      <p class="lg:text-xs text-xs">
+                        Imperdível
+                      </p>
+                    </button>
+
+                    <button
+                      class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-32 lg:w-40 py-0.5">
+                      <img src="/public/icon-locacao.svg" class="mr-0.5" alt="">
+                      <p class="lg:text-xs text-xs">
+                        Compre já alugado
+                      </p>
+                    </button>
                   </div>
                 </div>
               </div>
-
-              <div class="p-6">
-
-                <div class="pb-6 flex items-center justify-between">
-                  <div>
-                    <a href="#!" class="">
-                      Chácara Santo Antônio
-                    </a>
-                  </div>
-                  <div class="flex gap-5">
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-compartilhar.svg" alt="">
-                    </a>
-                    <a href="#!" class="text-lg hover:text-green-600 font-medium ease-in-out duration-500">
-                      <img src="/public/icon-coracao-selecionado.svg" alt="">
-                    </a>
-                  </div>
-                </div>
-
-                <div class="pb-6 flex items-center justify-between">
-                  <p href="#!" class="text-red-700">
-                    Apartamento
-                  </p>
-                  <p href="#!" class="font-medium text-red-700">
-                    R$ 25.000.000,00
-                  </p>
-                </div>
-
-                <div class="pb-6 flex items-center">
-                  <p href="#!" class="">
-                    Alameda Ministro Rocha Azevedo, 1368
-                  </p>
-                </div>
-
-                <div class="py-3 grid grid-cols-4 border-y-2 items-center justify-center">
-                  <div class="flex items-center justify-start">
-                    <p>135<span class="text-gray-500 font-medium"> m2</span></p>
-                  </div>
-                  <div class="flex items-center justify-center ">
-                    <p>4<span class="text-gray-500 font-medium"> dorms</span></p>
-                  </div>
-                  <div class="flex items-center justify-center">
-                    <p>5<span class="text-gray-500 font-medium"> suítes</span></p>
-                  </div>
-                  <div class="flex items-center justify-end">
-                    <p>5<span class="text-gray-500 font-medium"> vagas</span></p>
-                  </div>
-                </div>
-
-                <div class="pt-6 grid grid-cols-3 items-center lg:gap-3 gap-1">
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-metro.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Metrô
-                    </p>
-                    <img src="/public/icone-metro-lilas.svg" class="ml-1" alt="">
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icone-permuta.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Permuta
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icon-estrela.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Destaque
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md px-2 py-0.5">
-                    <img src="/public/icone-imperdivel.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Imperdível
-                    </p>
-                  </button>
-
-                  <button
-                    class="flex justify-center items-center border text-red-700 border-red-700 rounded-md lg:px-2 w-40 py-0.5">
-                    <img src="/public/icon-locacao.svg" class="mr-1" alt="">
-                    <p class="lg:text-xs text-xs">
-                      Compre já alugado
-                    </p>
-                  </button>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -682,14 +1829,14 @@
   </section>
 
   <!--PAGINAÇÃO-->
-  <div class="grid md:grid-cols-12 grid-cols-1 mt-8 py-10 md:hidden">
+  <div class="grid lg:hidden md:grid-cols-12 grid-cols-1 mt-8 py-10">
     <div class="md:col-span-12 text-center">
       <nav>
         <ul class="inline-flex items-center -space-x-px">
           <li>
             <a href="#"
               class="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-md bg-red-700 hover:bg-red-800">
-              <img src="/public/icon-seta-left.svg" alt="">
+              <i class="fa-solid fa-chevron-left text-white"></i>
             </a>
           </li>
           <li>
@@ -706,12 +1853,9 @@
             <a href="#" class="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-full text-black">4</a>
           </li>
           <li>
-            <a href="#" class="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-full text-black">5</a>
-          </li>
-          <li>
             <a href="#"
               class="w-10 h-10 inline-flex justify-center items-center mx-1 rounded-md bg-red-700 hover:bg-red-800">
-              <img src="/public/icon-seta-left.svg" alt="" class="rotate-180">
+              <i class="fa-solid fa-chevron-right text-white"></i>
             </a>
           </li>
         </ul>
@@ -720,7 +1864,7 @@
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-5">
+  <footer class="bg-red-700 w-full flex flex-col justify-center items-center py-20 text-white px-10">
     <div class='lg:justify-between justify-center w-full items-center flex flex-col'>
       <!-- ACESSO -->
       <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
@@ -728,7 +1872,7 @@
           <span class="flex items-center justify-center mr-4">ACESSO</span>
           <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
         </div>
-        <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4 lg:pl-0">
+        <div class="grid grid-cols-1 gap-8 pt-10 md:grid-cols-4">
           <div>
             <h2 class="mb-3">
               <a href="index.html">Home</a>
@@ -825,7 +1969,7 @@
       </div>
 
       <!-- SOMBRA -->
-      <img src="/public/blur-vermelho-1.svg" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
+      <img src="/public/blur-vermelho-1.png" alt="logo Gukenz" width="100%" height="100%" />
 
       <!-- NOSSAS UNIDADES -->
       <div class='flex flex-col w-full justify-between items-stretch pt-14 lg:max-w-6xl'>
@@ -834,7 +1978,7 @@
           <span class="flex flex-1 items-center font-light w-full bg-white h-0.5"></span>
         </div>
 
-        <div class="grid grid-cols-1 gap-8 py-10 md:grid-cols-4 pl-5 lg:pl-0">
+        <div class="grid grid-cols-1 gap-8 py-10 md:grid-cols-4">
           <div>
             <h2 class="mb-3">Agência <span class="font-semibold">Perdizes</span></h2>
             <ul class="flex flex-col gap-3">
@@ -848,7 +1992,7 @@
               </li>
               <li>
                 <p class="flex justify-start">
-                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
@@ -876,7 +2020,7 @@
               </li>
               <li>
                 <p class="flex justify-start">
-                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
@@ -906,7 +2050,7 @@
               </li>
               <li>
                 <p class="flex justify-start">
-                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
@@ -940,7 +2084,7 @@
               </li>
               <li>
                 <p class="flex justify-start">
-                  <img src="/public/telephone_126341.svg" class="mr-1" alt="">
+                  <img src="/public/telephone.svg" class="mr-1" alt="">
                   (11) 99999-0938
                 </p>
               </li>
@@ -963,7 +2107,7 @@
       </div>
 
       <!-- SOMBRA -->
-      <img src="/public/blur-vermelho-1.svg" alt="logo Gukenz" width="100%" height="100%" />
+      <img src="/public/blur-vermelho-1.png" class="rotate-180" alt="logo Gukenz" width="100%" height="100%" />
 
       <!-- HORÁRIOS -->
       <div class='flex flex-col w-full justify-between items-stretch lg:max-w-6xl'>
@@ -991,10 +2135,10 @@
           <div class='flex gap-10 items-end justify-center'>
             <a href="https://sacorp.tec.br/?utm_source=www.mayerbastoscostaadv.com.br&utm_medium=banner&utm_campaign=slogan"
               target='_blank' rel="noreferrer">
-              <img src="/public/logo-sacorp.svg" alt="logo Sacorp" width="100%" height="100%" loading="lazy" />
+              <img src="/public/sacorp.png" alt="logo Sacorp" width="100%" height="100%" loading="lazy" />
             </a>
             <a href="https://www.gukenz.com.br/" target='_blank' rel="noreferrer">
-              <img src="/public/logo-gukenz.svg" alt="logo Gukenz" width="100%" height="100%" />
+              <img src="/public/gukenz.png" alt="logo Gukenz" width="100%" height="100%" />
             </a>
           </div>
         </div>

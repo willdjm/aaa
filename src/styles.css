@@ -1317,9 +1317,6 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.pb-0 {
-  padding-bottom: 0px;
-}
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1349,9 +1346,6 @@ video {
 }
 .pl-2 {
   padding-left: 0.5rem;
-}
-.pl-5 {
-  padding-left: 1.25rem;
 }
 .pt-10 {
   padding-top: 2.5rem;
@@ -2282,11 +2276,6 @@ video {
     padding-bottom: 4rem;
   }
 
-  .lg\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
   .lg\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
@@ -2306,10 +2295,6 @@ video {
 
   .lg\:pb-44 {
     padding-bottom: 11rem;
-  }
-
-  .lg\:pl-0 {
-    padding-left: 0px;
   }
 
   .lg\:pl-96 {
