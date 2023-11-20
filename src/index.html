@@ -15,6 +15,13 @@
 
 <body class="flex flex-col items-center justify-center w-full">
 
+
+
+
+
+
+
+
   <!-- NAVBAR DESKTOP -->
   <div class=" justify-center items-center w-full lg:flex hidden absolute top-0 z-50">
     <div class="relative flex flex-col lg:flex-wrap items-center justify-center w-full">
@@ -622,6 +629,71 @@
     </script>
   </div>
   <!-- FIM BANNER -->
+
+
+
+
+
+
+
+      <!-- NAVBARAR MOBILE -->
+      <nav class="w-full lg:hidden bg-gray-300">
+        <div class="max-w-6xl mx-auto px-4 py-3 lg:px-0">
+          <div class="flex justify-between">
+
+          
+    
+            <!-- Mobile menu button -->
+            <div class="lg:hidden flex items-center">
+              <button class="outline-none mobile-menu-button2 flex flex-col items-center justify-center text-gray-500">
+                <span>Perdizes</span>
+                 <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            </div>
+          </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu2 bg-red-700 mt-1">
+          <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+<div class="items-center justify-center flex w-full gap-1">
+<div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md">
+  <img src="/public/telephone.svg" class="text-white" alt="">
+</div>
+<p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+</div>
+<div class="items-center justify-center flex w-full gap-1">
+  <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+  <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md">
+    <img src="/public/telephone.svg" class="text-white" alt="">
+  </div>
+  </div>
+
+          </div>
+        </div>
+
+
+
+
+        <script>
+          const btn2 = document.querySelector("button.mobile-menu-button2");
+          const menu2 = document.querySelector(".mobile-menu2");
+    
+          btn2.addEventListener("click", () => {
+            menu2.classList.toggle("hidden");
+          });
+        </script>
+
+        <!-- JAVA SCRIPT DROPDOWN -->
+      </nav>
+
+
+
+
+
+
+
+
 
   <!-- BUSCA -->
   <section class="flex w-full justify-center items-center px-5 py-10">
