@@ -2394,4 +2394,14 @@ video {
   .group:hover .lg\:group-hover\:block {
     display: block;
   }
+
+  .group:hover .group-hover\:lg\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .group:hover .lg\:group-hover\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
 }
