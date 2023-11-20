@@ -15,55 +15,243 @@
 
 <body class="flex flex-col items-center justify-center w-full">
 
-  <!-- NAVBAR NÚMEROS AGÊNCIAS -->
-  <nav class="w-full bg-gray-300 py-5 items-center justify-center hidden md:flex">
-    <div class="w-full max-w-6xl lg:flex hidden lg:items-end lg:justify-end">
-      <ul class="flex w-full gap-3 items-center justify-end max-w-5xl">
-        <li class="ml-3">
-          <a class="flex items-center justify-center gap-1" href="#">
-            <p href="#!" class="text-red-700 uppercase text-base">
-              Perdizes
-            </p>
-            <i class="fa-brands fa-whatsapp"></i>
-            <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
-          </a>
-        </li>
-        <li class="ml-3">
-          <a class="flex items-center justify-center gap-1" href="#">
-            <p href="#!" class="text-red-700 uppercase text-base">
-              Pinheiros
-            </p>
-            <i class="fa-brands fa-whatsapp"></i>
-            <p class="text-xs">(11) <span class="text-base">99939-9934</span></p>
-          </a>
-        </li>
-        <li class="ml-3">
-          <a class="flex items-center justify-center gap-1" href="#">
-            <p href="#!" class="text-red-700 uppercase text-base">
-              Jardins
-            </p>
-            <i class="fa-brands fa-whatsapp"></i>
-            <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
-          </a>
-        </li>
-        <li class="ml-3">
-          <a class="flex items-center justify-center gap-1" href="#">
-            <p href="#!" class="text-red-700 uppercase text-base">
-              Vila Romana
-            </p>
-            <i class="fa-brands fa-whatsapp"></i>
-            <p class="text-xs">(11) <span class="text-base">93207-3204</span></p>
-          </a>
-        </li>
-      </ul>
+  <!-- NAVBAR DESKTOP -->
+  <div class=" justify-center items-center w-full lg:flex hidden absolute top-0 z-50">
+    <div class="relative flex flex-col lg:flex-wrap items-center justify-center w-full">
+      <img src="/public/img-menu.png" class="h-full w-full hidden md:flex" alt="" />
+      <img src="/public/barraEtapaFinanciamentoMobile.png" class="h-full w-full md:hidden flex" alt="" />
+      <div class="absolute top-0 flex items-center justify-center w-full">
+        <div class="absolute top-2 flex items-center justify-end w-full max-w-6xl">
+          <ul class="flex w-full gap-3 items-center justify-end">
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Perdizes
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Pinheiros
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99939-9934</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Jardins
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-red-700 uppercase text-base">
+                  Vila Romana
+                </p>
+                <i class="fa-brands fa-whatsapp"></i>
+                <p class="text-xs">(11) <span class="text-base">93207-3204</span></p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="absolute top-14 flex items-start justify-end w-full max-w-6xl">
+          <div class="w-1/2">
+            <a href="index.html" class="">
+              <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+            </a>
+          </div>
+<div class="w-full">
+          <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden max-w-3xl">
+            <li>
+              <a class="text-gray-400" href="index.html">Home</a>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Imóveis</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="resultadoBusca.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Buscar Imóveis</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Cadastre Seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="avaliacaoImovel.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Avalie seu Imóvel</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="imoveisFavoritos.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Favoritos</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Imóveis Visualizados</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="indice.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Índice de imóveis</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Serviços</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaFinanciamento.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Financiamento</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="assessoriaJuridica.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Assessoria Jurídica</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Proposta de Compra</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Venda</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Autorização de Publicidade</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+  
+            <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
+              <a href="#"
+                class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
+                @click.prevent="showChildren=!showChildren">
+                <span>Institucional</span>
+                <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
+              </a>
+  
+              <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
+                x-transition:enter="transition ease duration-300 transform"
+                x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+                x-transition:leave="transition ease duration-300 transform"
+                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
+                style="display: none;">
+                <div class="bg-white rounded w-full relative z-10 py-1">
+                  <ul class="list-reset">
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="institucional.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Sobre a Zimmermann</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="areasdeatuacao.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Área de Atuação</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="#"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Seja Corretor Associado</span> </a>
+                    </li>
+                    <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
+                      @mouseenter="showChildren=true">
+                      <a href="contact.html"
+                        class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
+                        <span class="flex-1">Contato</span> </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="text-gray-400" href="blog.html">BLOG</a>
+            </li>
+            <li>
+              <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+</div>
+        </div>
+      </div>
     </div>
-    <div>
+  </div>
 
-    </div>
-  </nav>
-
-      <!-- NAVBARAR -->
-      <nav class="w-full">
+      <!-- NAVBARAR MOBILE -->
+      <nav class="w-full lg:hidden">
         <div class="max-w-6xl mx-auto px-4 py-3 lg:px-0">
           <div class="flex justify-between">
               <div>
@@ -386,7 +574,7 @@
   <!-- BANNER -->
   <div>
     <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
-    <div class="w-full max-w-6xl flex flex-col items-center justify-center px-4 lg:px-0">
+    <div class="w-full max-w-6xl flex flex-col items-center justify-center px-4 lg:px-0 lg:relative lg:top-10">
       <div x-data="slider" class="relative w-full flex">
         <!-- IMAGEM -->
         <template x-for="(image, index) in images">
