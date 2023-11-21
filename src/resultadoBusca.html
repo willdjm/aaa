@@ -12,7 +12,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="flex flex-col items-center justify-center w-full">
+<body class="flex flex-col items-center justify-center w-full bg-gray-100">
 
   <!-- NAVBAR DESKTOP -->
   <div class=" justify-center items-center w-full lg:flex hidden relative z-50">
@@ -249,201 +249,156 @@
     </div>
   </div>
 
-      <!-- NAVBARAR MOBILE -->
+  <!-- NAVBAR MOBILE -->
+  <div>
+    <!-- NAVBARAR MOBILE NUMEROS -->
+<nav class="w-full md:hidden ">
+  <div class="relative flex items-center justify-center">
+    <img src="/public/menuBarraTels.png" class="" alt="" />
+    <div class="absolute flex items-center justify-end w-full py-4">
+      <div class="lg:hidden flex items-end justify-end w-full gap-2 px-2 max-w-xs">
+        <button class="outline-none mobile-menu-tel1 flex flex-col items-center justify-center text-gray-500">
+          <span>Perdizes</span>
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <button class="outline-none mobile-menu-tel2 flex flex-col items-center justify-center text-gray-500">
+          <span>Pinheiros</span>
+          <i class="fa-solid fa-chevron-down text-xs"></i>
+        </button>
+        <div class="lg:hidden flex items-center gap-4">
+          <button class="outline-none mobile-menu-tel3 flex flex-col items-center justify-center text-gray-500">
+            <span>Jardins</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+          <button class="outline-none mobile-menu-tel4 flex flex-col items-center justify-center text-gray-500">
+            <span>Vila Romana</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- mobile menu -->
+  <!-- TEL1 -->
+  <div class="hidden mobile-tel1 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TEL2 -->
+  <div class="hidden mobile-tel2 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TEL3 -->
+  <div class="hidden mobile-tel3 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- TEL4 -->
+  <div class="hidden mobile-tel4 bg-red-700 mt-1">
+    <div class="py-4 flex items-center justify-between px-1 gap-1 h-28">
+      <div class="items-center justify-center flex w-full gap-1">
+        <div class="w-14 h-14 bg-red-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <img src="/public/telephone.svg" width="50%" height="50%" class="text-white" alt="">
+        </div>
+        <p class="text-xs text-white">(11) <span class="text-base text-white">5466-5349</span></p>
+      </div>
+      <div class="items-center justify-center flex w-full gap-1">
+        <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+        <div class="w-14 h-14 bg-green-500 items-center justify-center flex rounded-md drop-shadow-xl">
+          <i class="fa-brands fa-whatsapp text-white text-4xl"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JS TEL 1 -->
+  <script>
+    const tel1 = document.querySelector("button.mobile-menu-tel1");
+    const menuTel1 = document.querySelector(".mobile-tel1");
+
+    tel1.addEventListener("click", () => {
+      menuTel1.classList.toggle("hidden");
+    });
+  </script>
+  <!-- JS TEL 2 -->
+  <script>
+    const tel2 = document.querySelector("button.mobile-menu-tel2");
+    const menuTel2 = document.querySelector(".mobile-tel2");
+
+    tel2.addEventListener("click", () => {
+      menuTel2.classList.toggle("hidden");
+    });
+  </script>
+  <!-- JS TEL 1 -->
+  <script>
+    const tel3 = document.querySelector("button.mobile-menu-tel3");
+    const menuTel3 = document.querySelector(".mobile-tel3");
+
+    tel3.addEventListener("click", () => {
+      menuTel3.classList.toggle("hidden");
+    });
+  </script>
+  <!-- JS TEL 2 -->
+  <script>
+    const tel4 = document.querySelector("button.mobile-menu-tel4");
+    const menuTel4 = document.querySelector(".mobile-tel4");
+
+    tel4.addEventListener("click", () => {
+      menuTel4.classList.toggle("hidden");
+    });
+  </script>
+</nav>
+
+      <!-- NAVBARAR MOBILE MENU -->
       <nav class="w-full lg:hidden">
-        <div class="max-w-6xl mx-auto px-4 py-3 lg:px-0">
+        <div class="px-2 py-2">
           <div class="flex justify-between">
               <div>
                 <a href="index.html" class="">
-                  <img class="cursor-pointer" src="/public/logo-superior.png" alt="...">
+                  <img class="cursor-pointer" src="/public/logo-superior.png" width="90%" height="90%" alt="...">
                 </a>
               </div>
-              <!-- Primary Navbar items -->
-              <div class="hidden md:flex items-center space-x-1">
-                <ul class="lg:flex lg:flex-row lg:items-center lg:justify-between gap-8 w-full hidden">
-                  <li>
-                    <a class="text-gray-400" href="index.html">Home</a>
-                  </li>
-        
-                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
-                    <a href="#"
-                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
-                      @click.prevent="showChildren=!showChildren">
-                      <span>Imóveis</span>
-                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
-                    </a>
-        
-                    <div class="absolute top-auto left-0 min-w-full w-56 z-30 mt-1" x-show="showChildren"
-                      x-transition:enter="transition ease duration-300 transform"
-                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
-                      x-transition:leave="transition ease duration-300 transform"
-                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
-                      style="display: none;">
-                      <div class="bg-white rounded w-full relative z-10 py-1">
-                        <ul class="list-reset">
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="resultadoBusca.html"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Buscar Imóveis</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="#"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Cadastre Seu Imóvel</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="avaliacaoImovel.html"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Avalie seu Imóvel</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="imoveisFavoritos.html"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Favoritos</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="#"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Imóveis Visualizados</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="indice.html"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Índice de imóveis</span> </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-        
-                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
-                    <a href="#"
-                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
-                      @click.prevent="showChildren=!showChildren">
-                      <span>Serviços</span>
-                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
-                    </a>
-        
-                    <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
-                      x-transition:enter="transition ease duration-300 transform"
-                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
-                      x-transition:leave="transition ease duration-300 transform"
-                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
-                      style="display: none;">
-                      <div class="bg-white rounded w-full relative z-10 py-1">
-                        <ul class="list-reset">
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="assessoriaFinanciamento.html"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Financiamento</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="assessoriaJuridica.html"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Assessoria Jurídica</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="#"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Proposta de Compra</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="#"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Autorização de Venda</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="#"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Autorização de Publicidade</span> </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-        
-                  <li class="block relative text-gray-400" x-data="{showChildren:false}" @click.away="showChildren=false">
-                    <a href="#"
-                      class="flex items-center rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1"
-                      @click.prevent="showChildren=!showChildren">
-                      <span>Institucional</span>
-                      <span class="ml-2"> <i class="mdi mdi-chevron-down"></i></span>
-                    </a>
-        
-                    <div class="absolute top-auto left-0 min-w-full w-60 z-30 mt-1" x-show="showChildren"
-                      x-transition:enter="transition ease duration-300 transform"
-                      x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
-                      x-transition:leave="transition ease duration-300 transform"
-                      x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
-                      style="display: none;">
-                      <div class="bg-white rounded w-full relative z-10 py-1">
-                        <ul class="list-reset">
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="institucional.html"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Sobre a Zimmermann</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="areasdeatuacao.html"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Área de Atuação</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="#"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Seja Corretor Associado</span> </a>
-                          </li>
-                          <li class="relative" x-data="{showChildren:false}" @mouseleave="showChildren=false"
-                            @mouseenter="showChildren=true">
-                            <a href="contact.html"
-                              class="px-4 py-2 flex w-full items-start no-underline hover:no-underline transition-colors duration-100 cursor-pointer">
-                              <span class="flex-1">Contato</span> </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <a class="text-gray-400" href="blog.html">BLOG</a>
-                  </li>
-                  <li>
-                    <a class="text-red-500 text-2xl" href="#"><i class="fa-solid fa-heart"></i></i></a>
-                  </li>
-                  <li>
-                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-instagram"></i></i></a>
-                  </li>
-                  <li>
-                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-linkedin"></i></a>
-                  </li>
-                  <li>
-                    <a class="text-gray-400 text-xl" href="#"><i class="fa-brands fa-youtube"></i></a>
-                  </li>
-                </ul>
-    
-              </div>
-          
-    
+
             <!-- Mobile menu button -->
             <div class="lg:hidden flex items-center">
               <button class="outline-none mobile-menu-button">
-                <i class="fa-solid fa-bars text-2xl">x</i>
+                <i class="fa-solid fa-bars text-2xl mr-2"></i>
             </button>
             </div>
           </div>
@@ -506,67 +461,62 @@
         <!-- JAVA SCRIPT DROPDOWN -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
       </nav>
+</div>
 
-  <!-- NAVBARFIXA OK -->
+  <!-- NAVBARFIXA -->
   <div class="w-full">
     <!-- NAVBARFIXA DESKTOP -->
-    <nav class="bg-red-700 fixed bottom-0 z-50 justify-center items-center w-full hidden lg:flex">
-      <div class="lg:w-2/5 flex items-center justify-between">
-        <a href="index.html">
-          <img class="cursor-pointer" src="/public/logo-footer.png" width="100%" height="100%" alt="...">
-        </a>
-      </div>
-      <div class="w-full bg-red-700 lg:flex items-center justify-between px-5">
-        <ul class="flex w-full items-center justify-between max-w-5xl">
-          <li class="ml-3">
-            <a class="flex items-center justify-center gap-1" href="#">
-              <p href="#!" class="text-white uppercase text-base">
-                Perdizes
-              </p>
-              <i class="fa-brands fa-whatsapp text-white"></i>
-              <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
-            </a>
-          </li>
-          <li class="ml-3">
-            <a class="flex items-center justify-center gap-1" href="#">
-              <p href="#!" class="text-white uppercase text-base">
-                Pinheiros
-              </p>
-              <i class="fa-brands fa-whatsapp text-white"></i>
-              <p class="text-xs text-white">(11) <span class="text-base text-white">99939-9934</span></p>
-            </a>
-          </li>
-          <li class="ml-3 font-bold">
-            <a class="flex items-center justify-center gap-1" href="#">
-              <p href="#!" class="text-white uppercase text-base">
-                Jardins
-              </p>
-              <i class="fa-brands fa-whatsapp text-white"></i>
-              <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
-            </a>
-          </li>
-          <li class="ml-3">
-            <a class="flex items-center justify-center gap-1" href="#">
-              <p href="#!" class="text-white uppercase text-base">
-                Vila Romana
-              </p>
-              <i class="fa-brands fa-whatsapp text-white"></i>
-              <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
-            </a>
-          </li>
-        </ul>
+    <nav class="fixed bottom-0 z-50 justify-center items-center w-full hidden lg:flex">
+      <div class="relative flex items-center justify-center">
+        <img class="cursor-pointer" src="/public/logo-footer.png" width="100%" height="100%" alt="...">
+        <div class="absolute flex items-center justify-between w-full max-w-6xl">
+          <ul class="flex w-full items-center justify-end gap-7">
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Perdizes
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Pinheiros
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99939-9934</span></p>
+              </a>
+            </li>
+            <li class="ml-3 font-bold">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Jardins
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">99999-0938</span></p>
+              </a>
+            </li>
+            <li class="ml-3">
+              <a class="flex items-center justify-center gap-1" href="#">
+                <p href="#!" class="text-white uppercase text-base">
+                  Vila Romana
+                </p>
+                <i class="fa-brands fa-whatsapp text-white"></i>
+                <p class="text-xs text-white">(11) <span class="text-base text-white">93207-3204</span></p>
+              </a>
+            </li>
+          </ul>        
+        </div>
       </div>
     </nav>
+
     <!-- NAVBARFIXA MOBILE -->
-    <nav class="flex fixed bottom-0 z-50 bg-green-500 justify-center items-center w-full lg:hidden">
-      <div class="w-full justify-between h-full flex items-center">
+    <nav class="flex fixed bottom-0 z-50 justify-center items-center w-full md:hidden">
         <a href="index.html">
-          <img class="cursor-pointer" src="/public/logo-barra-mobile.png" alt="...">
+          <img class="cursor-pointer" src="/public/logo-barra-mobile.png" width="100%" height="100%" alt="...">
         </a>
-      </div>
-      <div class="w-1/2 flex items-center justify-center">
-        <i class="fa-brands fa-whatsapp text-white text-5xl"></i>
-      </div>
     </nav>
   </div>
 
