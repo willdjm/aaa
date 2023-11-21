@@ -1017,9 +1017,9 @@
     </div>
   </footer>
 
-      <!-- BUSCA FOOTER -->
-      <div class="max-w-6xl w-full lg:flex items-center justify-between pt-10 pb-32 hidden">
-        <div class="text flex-col flex items-center justify-center text-sm">
+  <!-- BUSCA FOOTER -->
+  <div class="max-w-6xl w-full lg:flex items-center justify-between pt-10 pb-32 hidden">
+    <div class="text flex-col flex items-center justify-center text-sm">
       <p class="">Imóveis à venda em São Paulo:
         <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
         <a href="" class="underline">Imóveis em Água Branca <span class="no-underline">-</span></a>
@@ -1042,36 +1042,49 @@
         <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
         <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
         <span class="moreText hidden">
-        <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Cambuci <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
-        <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Brás <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Brooklin <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Butantã <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Cambuci <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
+          <a href="" class="underline">Imóveis em Aclimação <span class="no-underline">-</span></a>
         </span>
-        </p>
-    <button class="read-more-btn cursor-pointer">Mostrar mais <i class="fa-solid fa-chevron-down"></i></button>
+      </p>
+      <button class="read-more-btn cursor-pointer">Mostrar mais <i class="fa-solid fa-chevron-down"></i></button>
     </div>
-      <script>
-        const readMoreBtn = document.querySelector(".read-more-btn");
+    <!-- JS -->
+    <script>
+      const readMoreBtn = document.querySelector(".read-more-btn");
     const text = document.querySelector(".text");
     readMoreBtn.addEventListener("click", (e) => {
         text.classList.toggle("show-more");
-        if (readMoreBtn.innerText === "Mostrar mais") {
-            readMoreBtn.innerText = "Mostrar menos";
-        } else {
+        if (readMoreBtn.innerText === "Read More") {
             readMoreBtn.innerText = "Mostrar mais";
+        } else {
+            readMoreBtn.innerText = "Read More";
         }
     });
-      </script>
-    </div>
+    </script>
+    <!-- CSS -->
+    <style>
+    .moreText {
+        display: none;
+    }
+    .text.show-more .moreText {
+        display: inline;
+    }
+    .text.show-more .dots {
+        display: none;
+    }
+    </style>
+  </div>
 
 </body>
 </html>
