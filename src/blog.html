@@ -512,6 +512,14 @@
       </div>
     </nav>
 
+    <!-- NAVBARFIXA MOBILE -->
+    <nav class="flex fixed bottom-0 z-50 justify-center items-center w-full md:hidden">
+        <a href="index.html">
+          <img class="cursor-pointer" src="/public/logo-barra-mobile.png" width="100%" height="100%" alt="...">
+        </a>
+    </nav>
+  </div>
+
   <!-- BANNER -->
   <section class="w-full flex flex-col justify-center items-center pt-10 px-5 lg:relative lg:top-10">
     <div class='max-w-6xl flex flex-col w-full justify-between items-stretch'>
@@ -1195,8 +1203,9 @@
       </div>
     </div>
   </footer>
-
   <!-- BUSCA FOOTER -->
+
+
   <div class="max-w-6xl w-full lg:flex items-center justify-between pt-10 pb-32 hidden">
     <div class="text flex-col flex items-center justify-center text-sm">
       <p class="">Imóveis à venda em São Paulo:
@@ -1240,17 +1249,29 @@
     </div>
     <script>
       const readMoreBtn = document.querySelector(".read-more-btn");
-      const text = document.querySelector(".text");
-      readMoreBtn.addEventListener("click", (e) => {
+    const text = document.querySelector(".text");
+    readMoreBtn.addEventListener("click", (e) => {
         text.classList.toggle("show-more");
-        if (readMoreBtn.innerText === "Mostrar mais") {
-          readMoreBtn.innerText = "Mostrar menos";
+        if (readMoreBtn.innerText === "Read More") {
+            readMoreBtn.innerText = "Mostrar mais";
         } else {
-          readMoreBtn.innerText = "Mostrar mais";
+            readMoreBtn.innerText = "Read More";
         }
-      });
+    });
     </script>
+    <style>
+    .moreText {
+        display: none;
+    }
+    .text.show-more .moreText {
+        display: inline;
+    }
+    .text.show-more .dots {
+        display: none;
+    }
+    </style>
   </div>
+
 
 </body>
 
